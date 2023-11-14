@@ -1,0 +1,6 @@
+Supervised ML algorithms usually take a limited set of labled data and build models that can make reasonable predictions for new data. 
+
+	1)Classification models predict some finite and distinct types of categories this could be a label that identifies if an email is spam or not, whether an image contains a human face or not. 
+
+	2) Regression models predict continuous reponses such as change in temperature or calues of currency exchange rates. 
+	Regression models are applied to algorithmic trading, forcasting of electricity load, revunue prediction, and other. 

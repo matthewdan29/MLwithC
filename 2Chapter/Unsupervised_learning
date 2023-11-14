@@ -1,0 +1,5 @@
+Unsupervised learning algorithms do not use labeled datasets. 
+They create models that use intrinsic relations in data to find hidden patterns that they can use for making predictions. 
+The mose well known unsupervised learning techneque is clustering. 
+Clustering is applied in market researches, different types of analysis, DNA analysis, image segmentation, and object detection. 
+typical algorithms for creating models for performing clustering are k-means, k-medoids, Gaussion mixture models, hierarchial clustering, and hidden Markov models. 

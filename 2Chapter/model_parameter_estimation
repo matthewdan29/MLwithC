@@ -1,0 +1,10 @@
+There is no one universal loss function for optimization algorithms. 
+Differnet factors determine how to choose a loss function. 
+
+	1) Specifics of the given problem for example, if it is a regression or a classification model 
+
+	2) ease of calculating derivatives 
+
+	3) Percentage of outliers in the dataset 
+
+IN ML, the term optimizer is used to define an algorithm that connects a loss function and a technique for updating model parameters in response (think of backtracking in a DNN or FCNN) to the values of the loss function. 

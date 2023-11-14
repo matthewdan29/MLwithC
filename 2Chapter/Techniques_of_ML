@@ -1,0 +1,8 @@
+
+
+	1) Supervised learning is an approach based on the use of labeled data. 
+	  Labeled data is a set of known data samples with corresponding known target outputs. 
+	 Such as a kind of data is used to build a model that can predict future outputs. 
+
+	2) Unsupervised learning is a approach that does not require labeled data and can search hidden aptterns and structures in an arbitrary kind of data. 
+

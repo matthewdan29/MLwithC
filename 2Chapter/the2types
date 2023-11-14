@@ -1,0 +1,38 @@
+Internal parameters have the following characteristics
+
+	1) They are necessary for making predictions 
+
+	2) they define the quality of the model on the given problem 
+
+	3) we can learn them from training data. 
+
+	4) Usually they are a part of the model 
+
+Internal parameter are as follows: 
+
+	1) weights of artificial neural networks (ANNs)
+
+	2) Support vector values for SVM models 
+
+	3) Polynomial coefficients for linear regression or logictic regression
+
+
+
+On the other hand hyperparameters have the following 
+
+	1) They are used to configure algorithms that estimate model parameters
+
+	2) They practitioner usually specifies them. 
+
+	3) Their estimation is often based on using heuristics 
+
+	4) They are specific to a concrete modeling problem 
+
+
+Examples of hyperparameters are as follows 
+
+	1) C and sigma parameters used in the SVM algorithm for a classification quality configuration
+
+	2) The learning rate parameter that is used in the neural network training process to configure algorithm convergence. 
+
+	3) The k value that is used in the KNN algorithm to configure the numerber of neighbors. 
