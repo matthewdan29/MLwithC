@@ -1,0 +1,8 @@
+There are two standard practices to orgainze tensors with a linear array in memory: row-major ordering and column-major ordering. 
+
+	1) Row-Major ordering - We place consecutive elements of a row in linear order one after the other, and each row is also placed after the end of the previous one. 
+
+	2) Column-Major ordering - We do the same but with the column elements. 
+	  
+
+Data layouts have a significant impact on computational performance because the speed of traversing an array relies on modern CPU architectures that work with sequential data more efficiently that with non-sequential data.

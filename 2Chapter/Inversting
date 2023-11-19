@@ -1,0 +1,16 @@
+	Inverting: The inverse matrix is such a matrix that A^(-1) A = I, where I is an identiy matrix. 
+		   The identity matrix is a matrix that does not change any vector where we multipy that vector by that matrix. (f(x) = f(x^(-1)) for a 1 - to - 1 function. if must past the vertical and horizontal text.)
+
+We consider the main linear algebra concepts as well as operation on them. 
+Using this math apparatus, we can define and program many ML algorithms. 
+We can use tensors and atrices to define training datasets for training, and scalars can be usded as different types of coefficients. 
+We can use element-wise operations to perform arithmetic operations with a whole dataset. 
+We can use elemsnt-wise multiplication to scale a dataset. 
+We usually use trasposing to change a view of a vector or matrix to make them suitable for the dot-production operation. 
+The dot product is usually used to apply a linear function with weights expressed as matrix coefficients to a vector; for example, this vector can be a training sample. 
+Also, dot-production operations are used to update model parameters expressed as matrix or tensor coefficients according to an algorithm. 
+
+The norm operation is often used in formulas for loss functions because it naturally expresses the distance concept and can measure the difference between taret and predicted values. 
+The inverse matrix is a crucial concept for the analytical solving of linear equations systems. 
+Such systems often appear in different optimization problems. 
+Calcualating the inverse matrix is ver computationally expensive 

@@ -1,0 +1,5 @@
+The goal of the linear regression task is to find parameters vectors that satisfy the previoud equation. 
+There is no exact solution to such a system of linear equations, so the task is to estimate parameters that satisfy these equations with some assumptions. 
+One of the most popular estimations approaches is one based on the principle of least squares: minimizing the sum of the squares of the differencence between the observed dependent variable in the given dataset and those predicted by the linear function. 
+This is called the ordinary least squares (OLS) estimator. 
+
