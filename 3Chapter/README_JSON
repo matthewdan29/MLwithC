@@ -1,0 +1,24 @@
+JSON file format uses name-vale pair (namespaces) and array of such pairs. 
+It has rules on how to group such pairs to distinct objects and array declarations, and there are rules on how to define values of different types. 
+Below is a example of JSON format 
+
+{
+	name: "Bill", 
+	age: 25, 
+	phones:
+	[
+		{
+			type: "home"
+			number: 435343490
+		}, 
+		{
+			type: "work"
+			number: 56985468
+		}
+	]
+}
+
+The advantages of this format are human readability, software support and many computer platforms, and the possiblility to store hierarchial and nested data structures. 
+Disadvatages are its slow parsing speed in comparison with binary formats, and the fact it is not very useful for representing numerical matrices. 
+
+

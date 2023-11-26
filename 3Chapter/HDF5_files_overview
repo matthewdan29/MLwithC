@@ -1,0 +1,7 @@
+HDF5 is a highly efficient file format for storing datasets and scientific caluse. 
+Propose to look at its interface by transforming the dateset used in the previous section to HDF5 format. 
+
+THe main concepts of HDF5 format are groups and datasets. 
+Each group can contain other groups and have attributes of defferent types. 
+Each group can contain a set of datasets entries. 
+Each dataset is a multidimensional array of values of the same type which also can have attributes of different types. 

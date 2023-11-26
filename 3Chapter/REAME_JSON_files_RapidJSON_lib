@@ -1,0 +1,7 @@
+Some datasets com with structured annontations and can contain mulitiple files and folders. 
+A example of such is the "Common Object in Context" (COCO) dataset. 
+This dataset contains a text file with annotations for decribing relations between objects and thier structural parts. 
+This widely known dataset is used to train models for segmentation, object detection, and classification taskes. 
+Annotations in this dataset are defined in the JSON file format. 
+JSON is a widely used file format for objects and thier parts. 
+"RapidJSON" C++ library is this tool of choice 

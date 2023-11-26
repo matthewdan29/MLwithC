@@ -1,0 +1,4 @@
+As an example of a CSV file format, we use the iris dataset, which describes three defferent types of iris plants and was conceived by R.A. Fisher. 
+Each row in the file contains the following fields: sepal length, sepal width, petal legth, petal width, and string with a class name. 
+
+

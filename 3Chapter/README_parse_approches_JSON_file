@@ -1,0 +1,8 @@
+There are two main approaches to parse and procsses JSON files, 
+
+		1) Document Oject Model (DOM) is a hierarchical structure of objects that represents entities stored in files.
+It is usually stored in compter memory, and, in the case of large files, it can occupy a significant amount of memory. 
+
+		2) Simple API for XML (SAX) approach is to parse the file continuously and provide an application program interface (API) for a user to handle and process each event realted to the file parsing process. It is a general approach that is used with non-XML data too. 
+
+

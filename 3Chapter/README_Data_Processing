@@ -1,0 +1,20 @@
+Sometimes, we need to transform data stored in one format to another to satisfy our needs. 
+
+	1) Increasing human readability to ease communication with engineers. 
+
+	2) The existence of compression possibility to allow data to occupy less space on secondary storage. 
+
+	3) The use of data in the bbinary form to speed up the parsing process
+
+	4) Supporting the complex relations between different parts of data to make precise mirroring of a specific domain. 
+
+	5) Platform independence to be able to use the dataset in different development and production environments. 
+
+			Some common forms of file/data 
+
+	1) JavaScript Object Notation (JSON) (namespace technology is very important in cloud computing and sending resources between computes for processing data to network load balancing)
+
+	2) Comma-Separated Values (CSV) (think of databases and excel spread sheets)
+
+	3) Hierarchical Data Format v5 (HDF5) (non rational databases)
+

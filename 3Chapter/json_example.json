@@ -1,0 +1,45 @@
+{
+	"paper": 
+	[
+		{
+			"id": 1, 
+			"preliminary_decision": "accept", 
+			"review": 
+			[
+				{
+					"confidence": "4", 
+					"evaluation": "1", 
+					"id": 1, 
+					"lan": "English",
+					"orientation": "0", 
+					"remarks": "", 
+					"text": "The article addresses a contingent problem and very relevant, and includes both a diagnosis use of good practices as a solution (concrete good practices)...", 
+					"timespan": "2023-11-26"
+				}, 
+				{
+					"confidence": "4", 
+					"evaluation": "1", 
+					"id": 2, 
+					"lan": "English", 
+					"orientation": "1", 
+					"remarks": "", 
+					"text": "The article presents recommendations practices for secure software development...", 
+					"timespan": "2023-11-26"
+				}, 
+				{
+					"confidence": "5", 
+					"evaluation": "1", 
+					"id": 3, 
+					"lan": "English", 
+					"orientation": "1", 
+					"remarks": "", 
+					"text": "The topic is very cool. Also, Ya I know I give off HOT DAD vibes. there is only 2 options and that love it and act like it or hate but deep down you know you love that energy I just seem to have (don't lie to yourself)...", 
+					"timespan": "1993-09-17"
+				}
+			]
+		},
+		...
+	]
+}
+
+
