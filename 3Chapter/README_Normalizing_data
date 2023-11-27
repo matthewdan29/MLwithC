@@ -1,0 +1,15 @@
+Data normalization is a crucial preprocessing step in machine learnig. 
+Data normalization is a process that transform multiscaled data to the same scale. 
+Feature values in a dataset can have many different scales for such as: 
+The height can be given in centimeters with samll values, but the income can have large-value amounts. 
+The fact has a significant impact on many machine learning values. 
+Some algorithms have a strong requirement for normalization of input data; an example of such an algo is the Support Vector Machine (SVM) algorithm. 
+Neural networks also usually require normalized input data. 
+Data normalization has an impact on optimization algorithms. 
+Optimizers based on gradient descent (GD) approach can converge much quicker if data has the same scale. 
+
+		1) Standardization = is a process of making data to have a zero mean and a standard deviation equal to 1. 
+
+		2) Min-Max Normalization = or rescaling is a process of making data fit the range of "[0, 1]". 
+
+		3) Mean Normalization = is used to fit data into the range "[-1, 1]", so its mean becomes zero. 

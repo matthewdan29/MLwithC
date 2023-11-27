@@ -1,0 +1,3 @@
+In most cases, images are represented in computer memory in an interleaved format, which means that pixel values are placed one by one in linear order. 
+Each pixel value consists of several numbers representing a color. 
+for the RGB format, it will be three values placed together.

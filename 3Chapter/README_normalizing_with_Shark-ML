@@ -1,0 +1,10 @@
+The "Shark-ML" lib implements several normalization approaches. 
+They are implemented as trainer classes for the "Normalizer" model type. 
+We can reuse the "Normalizer" type after training on different data. 
+There are the following normalization trainer classes: 
+
+		1) "NormalizeComponentsUnitInterval" = This class trains a normalization model that transforms data to fit a unit interval. 
+
+		2) "NormalizeComponentsUnitVariance" = This class trains a normalization model that transforms data to have unit variance and, optionally, a zero mean. 
+
+		3) "NormalizeComponetsWhitening" = This class trains a normalization model that transforms data to have zero mean and unit variance by default, but we can specify the target varance value. 
