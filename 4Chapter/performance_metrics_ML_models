@@ -1,0 +1,7 @@
+When we develop or implement a particular ML algorithm, we need to estimate how well it works. 
+We need to estimate how well it solves our task. 
+We use some numeric metrics for algorithm performance estimation. 
+An example of such a metric could be a value of mean squared error that's been calculated for target and predicted values. 
+We can use this value to estimate how distant our predictions are from the target values we used for training. 
+After use case for performance metrics is their use as abjective functions in optimization processes. 
+Some performance metrics are used for manual observations, though others can be used for optimization purposes too. 

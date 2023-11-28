@@ -1,0 +1,8 @@
+The main idea behind the grid search approach is to create a grid of the most reasonable hyperparameter values. 
+
+At each step, the grid search algorithm chooses a set of hyperparameter values and trains a model. 
+Next, the training step algorithm uses the K-fold cross-validation technique to estimate model performance. 
+We should also define a single model performance estimation metric for model comparison that the algorithm will calculate at each training steop for every model. 
+After completeing the model training process with each set of parameters from every grid cell, the algorithm chooses the best set of hyperparameter values by comparing the metric's values and selecting the best one. Usually, the set with the smallest value is the best one. 
+
+

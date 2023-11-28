@@ -1,0 +1,13 @@
+To estimate algorithm quality for each classification class, we use 2 metrices
+
+		1) precision = Is proportional to the number of correctly classified items within selected ones. 
+Another name for precision is specifiy
+
+		2) recall = is proportional to the number of correctly classified items within all ground truth positive itmes. 
+Anoher name for the recall is sensitivity
+
+Assume that we are interseted in the detection of positive items - lets call them relevant ones. 
+So, we use the recall value as a measure of an algorithm's ability to detect relevant items and the precision value as a measure of an algorithm's ability to see the differences between classes. 
+These measures do not depend on the number of objects in each of the classes, and we can use them for imbalanced dataset classification. 
+
+

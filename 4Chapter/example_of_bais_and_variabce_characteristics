@@ -1,0 +1,8 @@
+Validation is a technique that's used to test model performance. 
+It estimates how well the model makes predictions on new data. 
+New data is data that we did not use for the training process. 
+To perform validation, we usually divide our initial dataset  in two or three parts. 
+One part should contain most of the data and will be used for training, while other ones will be used to validate and test the model. 
+Usually, validation is performed for iterative algorithms after one training cycle. 
+We can perform testing after the overall training process. 
+

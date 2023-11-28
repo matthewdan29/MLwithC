@@ -1,0 +1,14 @@
+The idea is to devide the dataset into K blocks of the same size. 
+Then, we use one of the blocks for validation and then other for training. 
+We repeat this process K times, each time chooseing a different block for validation, and in the end, we average all the results. 
+The data splitting scheme during the whole cross-validation cycle: 
+	
+	1) Divide the dataset into K blocks of the same size. 
+
+	2) select one of the blocks for calidation and the remaining ones for training. 
+	
+	3) Repeat this process, making sure that each block is used for validation and the rest are used for training. 
+
+	4) Average the results of the performance metrics that were calculated for the validation sets on each iteration. 
+
+

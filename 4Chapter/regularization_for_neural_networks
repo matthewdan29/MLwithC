@@ -1,0 +1,5 @@
+L1 regularization and L2 regularizations are widely used to train neural networks and are usually called weight decay. 
+Data augmentation also plays an essential role in the training processes for neural networks. 
+There are other regularization methods that can be used neural networks. 
+For example, Dropout is a particular type of regularization that was developed especially for neural networks. 
+This algorithm randomly drops some neural metwork nodes; it makes other nodes more insensitive to the weights of other nodes, which means that the model nbecomes more robust and stops overfitting

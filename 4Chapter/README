@@ -1,0 +1,6 @@
+This DIR describes the bias and variance effects and thier pathological cases, which usually appear when training machine learning models. 
+The high variance effec, also known as overfitting, is a phenomenon in ML where the constructed model explains the examples from the training set but works relatively poorly on the examples that did not participate in the training process. 
+This occurs because while training a model, random patternes will start appearing that are normally absent from the general population. 
+The opposite of overfitting is known as underfitting. 
+This happens when the trained model becomes unable to predict patterns in new data or even in the training data. 
+Such an effect can be the result of a limited training dataset or weak model design. 

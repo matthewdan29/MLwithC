@@ -1,0 +1,20 @@
+Regression task metrics are used to measure how close the predicted values are to the ground truth ones. 
+Such measurements can help us estimate the prediction quality of the algorithm. 
+Under regression metrics, there are four main metrics (NOTE: being able to do this on the fly will be one of your greatest tools). 
+
+	1) Mean Squared Error(MSE): is a widely used metric for regression algorithms to estimate their quality. 
+It is an average squared difference between the predictions and ground truths values. 
+MSE is often used as a target loss function for optimization algorithms because it is smoothly differentiable abd is a convex function. 
+
+	2) Root Mean Squared Error (RMSE) metric is usually used to estimate performance, such as when we need to give bigger weight to higher erros. 
+We can interpret this as the standard deviation of the differences between predictions and ground truth values. 
+
+	3) Mean Absolute Error (MAE) = The MAE metric is a linear function with equally weightred prediction errors. 
+This metric is more robust for outliers than RMSE. 
+
+	4) R Squared = The R squared metric is also known as a coefficient of determination. 
+It is used to measure how good our independent variables describe the problem and explain the variablitly of dependent variables. 
+The higher values tell us that the model explains our data well enough, while lower values tell us that the model makes many errors. 
+
+	5) Adjusted R Squared = It is the same as the R squared metric but with a penalty for a large number of independent variables. 
+The main idea is that if new independent variables improve the model's quality, the values of the metric increase; otherwise they decrease. 

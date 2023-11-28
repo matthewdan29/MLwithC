@@ -1,0 +1,5 @@
+The bias is a prediction characteristic that tells us about the distance between model predictions and ground truth values. 
+Usually, we use the term high bias or underfitting to say that model prediction is to far from the ground truth values, which means that the model generalization ability is weak.
+To deal with high bias, we can add more features to the training sample. 
+Increasig the polynomial degree for the polynomial regression model adds more features; these all-new features describe the original training sample because each additional polynomial term is based on the original sample value. 
+ 

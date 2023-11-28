@@ -1,0 +1,6 @@
+Variance is a perdiction characteristic that tells us about the variability of model predictions; basicly how big the range of output values can be (the possiblity of how big your Y axis value might get. think of veritcal outliners)
+Usually we use the term high variance or overfitting in the case when a model tries to incorporate many training samples very precisely. 
+In such case, the model cannot provide a good approximation for new data but has excellent performance on the training data. 
+For the polynomial regression model, MEA is a better performance characterisitc than MSE or RMSE because squared functions average errors too much. 
+Moreover, even a straight-line model can have low MSE values for such data because errors from both sides of the line compensate for each other. 
+
