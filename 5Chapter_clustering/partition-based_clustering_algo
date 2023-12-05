@@ -1,0 +1,4 @@
+The partitioin-based methods use a similarty measure to combine objects into groups. 
+A practitioner usually selects the similarity measure for such kinds of algorithms by themself, using prior knowledge about a problem of heuristics to select the measure properly. 
+Sometimes, several measures need to be tried with the same algo to choose the best one, 
+Also, partition based methods usually require either the number of desired clusters or a threshold that regulates the number of output clusters to be explicity specified. 

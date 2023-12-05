@@ -1,0 +1,3 @@
+In density based methods, clusters are considered as regions where the multiple objects density is high, which are separated by regions with a low density of objects. 
+
+The DBSCAN (Density-based Spatial Clustering of Applications with Noise) algo is one of the first density clustering algorithms. 

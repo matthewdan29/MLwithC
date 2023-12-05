@@ -1,0 +1,5 @@
+Spectral clustering refers to all methods that divide a set of data into clusters using the eigenvectors of the adjacency matrix of a graph or other matrices derived from it. 
+Spectral clustering is a transformation of the initial set of objects into a set of cuts problem. 
+The resulting set of points in then clustered using the standard methods. 
+Changing the representation created by eigenvectors allows us to set the properties of the original set of clusters more clearly. 
+

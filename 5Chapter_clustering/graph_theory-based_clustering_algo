@@ -1,0 +1,5 @@
+The essence of algorithms based on the graph theory is to represent target objects in graph form. 
+Graph vertices correspond to objects, and the edge weights are equal to the diestance between vertices. 
+The advantages of graph clustering algorithms are thier excellent visiblity, relative ease of implementation, and thier ability to make various improvements based on geometrical considerations. 
+The main algorithms based on graph theory are the algorithm for slelcting connected components, the algorithm for constructing the minium spanning tree, and the multilayer cluster algorithm. 
+

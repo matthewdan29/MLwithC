@@ -1,0 +1,6 @@
+Model based algorithms assume that there is a particular mathematical model of the cluster in the data space and try to maximiuze the likelihood of this model and the availale data. 
+often, this uses the apparatus of mathematical statistics. 
+
+The EM (Expection-Maximization) algo assumes that the dataset can be modeled using a linear combination of multidimensional normal distributions. 
+its purpose is to estimate distribution parameters that maximize the likelihood function used as a measure of model quality. 
+It assumes that the data in each cluster obeys a particular distribution law --mostly its normal distribution(This method is very powerful).

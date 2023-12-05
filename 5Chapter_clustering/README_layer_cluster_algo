@@ -1,0 +1,1 @@
+The layer clustering algorithm generates a sequence of sub-graphs of the graph G that reflect the hierarchical relationships between clusters G^0 (subset) G^1 (subset) ... (subset) G^(m) 

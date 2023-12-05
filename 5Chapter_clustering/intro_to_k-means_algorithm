@@ -1,0 +1,14 @@
+The k-means algorithm, is proportional to the distance to the cluster center of mass. 
+The cluster center of mass is the average value of cluster objects' coordinates in the data space. 
+The k-means algorithm can be briefly described with the following steps. 
+		1) we select k random objects and define each of thems as a cluster prototype that represents the cluster's center of mass. 
+		
+		2) then, remaining objects are attached to the cluster with greater similarity. 
+		
+		3) The center of mass of each cluster is recalculated. 
+
+For each obtained partition a particular evaluation function is calculated, the values of which at each step from a converging series. 
+The process continues until the specified series converges to its limit value. 
+
+Basicly moving objects from one cluster to another cluster ends when the clusters remain unchanged. 
+Minimizing the evaluation function allows the resulting clusters to be as compact and separate as possible. 

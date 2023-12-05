@@ -1,0 +1,32 @@
+Among the algorithms of hierarchial clustering, there ate two main types: 
+
+		1) Top-Down algorithmswork on: 
+			A) All objects are placed in one cluster
+			B) which is then divided into smaller and smaller clusters. 
+
+		2) Bottom-up algorithms: 
+			A) They place each object in a separate cluster at the beginning of the work
+			B) Then merge clusters into larger ones until all the objects in the datasete are contained in the one cluster
+			C) Building a system of nested partitions.
+They usually make a tree.
+
+
+There are several metrics or linkage criteria for cluster union used in hierarchical clustering methods: 
+
+	1) Single linkage: This method, the distance between the two clusters is determined by the distance between the two closest objects in different clusters. 
+The resulting cluster tend to chain together. 
+
+	2) Complete linkage: This method the distances between clusters are determined by the largest distance between any two objects in different clusters. 
+This method usually works very well when objects come from separate groups. 
+If the clusters are elongated or their natural type is chained, then this method is unsuitable. 
+
+	3) Unweighted pairwise mean linkage: This method the distance between two different clusters is calculated as an average distance between all pairs of objects in them. 
+This method is useful when objects from different groups but it work equally well in the case of elongated clusters. 
+
+	4) Weighted pairwise mean linkage: This method is identical to the unweighted pairwise mean method, except that the size of the corresponding clusters is used as a weighting factor in the calculations. 
+Therefor, this method should be used when we assume unequal cluster sizes. 
+
+	5) Weighted centroid linkage: this method the distance between two clusters is defined as the distance between their centers of mass. 
+
+	6) Weighted centroid linkage (median): This method is identical to the previous one, except that the calculations used weights for the distance measured between cluster sizes. 
+Therefore, if there are significant differeces in cluster sizes, this method is preferable to the previous one. 

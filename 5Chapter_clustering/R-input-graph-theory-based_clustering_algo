@@ -1,0 +1,11 @@
+The algorithm for selecting connected components is based on the R input parameter, and the algorithm removes all edges in the graph with distances greater than R. 
+Only the closest pair of objects remain connected. 
+The algorithm's goal is to find the R value at which the graph collapses into several connected components. 
+The resulting components are clusters. 
+For the selection fo the R paramters, a histogram of the distribution of pairwise distances is usually constructed. 
+For problems with a well defined cluster data structure, there will be two peaks in the histogram: 
+			1) one corresponds to in-cluster distances and the second to inter-cluster distances .
+	
+			2) The R paramter is selected from the minimum zone between these peaks. 
+
+Managing the number of clusters using the distance threshold can be difficult. 

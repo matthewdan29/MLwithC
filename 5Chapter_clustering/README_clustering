@@ -1,0 +1,37 @@
+Clustering is an unsupervised machine learning method that is used for splitting the original dataset of objects into groups classified by properties. (This has a lot to do with cancer research topic I was working with on a nuero network(ya i know its misspelled but if your able to understand it you in the right place my friend))
+An object in ML is usually treated as a point in the multidimensional metric space. 
+Every space dimension corresponds to an object property, and the metric is a function of the values of these properties. 
+Depending on the types of dimensions in this space, which can be both numerical and categorical, we choose thetype of clustering algo and specific metric function. 
+This choice depends on the nature of different objects properties' types. 
+
+	We can split cluster analysis into the following phases: 
+
+	1) Selecting objects for clustering 
+	
+	2) Determining the set of object properties that we will use for the metric
+
+	3) Normalizing property values 
+
+	4) calculating the metric
+
+	5) Identifying distinct groups of objects based on metric values (DO NOT DO IT WITH COVID 19!!(hey i'm telling you this for your safty))
+
+After the analysis of clustering results, some correction may be required for the selected metric of the chosen algo 
+
+	We can use clustering for various real world tasks like: 
+	
+	1) Splitting news into several categories for advertisers. 
+
+	2) identifying custromer groups by their preferences for marketing analysis (It gets deeper my guy like if your not in this game you shouldnt be reading this)
+
+	3) Identifying plant and animal groups for biological studies 
+
+	4) Identifying and categorizing properties for city planning and managment
+
+	5) Detecting earthquake epicenter clusters to identfy danger zones
+
+	6) Categorizing group of insurances policyholders for risk management 
+
+	7) categorizing books in libraries 
+
+	8) Searching for hidden structural similarities in the data 

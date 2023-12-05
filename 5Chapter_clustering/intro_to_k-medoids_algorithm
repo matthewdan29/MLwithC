@@ -1,0 +1,11 @@
+To reduce the influence of noise and isolated points on the clustering result, the k-medoids algorithm, in contrast to k-means algorithm, uses on of the cluster objects as the center of cluster. 
+As in the k-means method, k representative objects are selected at random. 
+Eache of the remaining objects is combined into a cluster with the nearest representative object. 
+Then, each representative object is iteratively replaced with an arbitrary unrepresentative object from the data space. 
+The replacement process continues until the quality of the reusting clusters improves. 
+The clustering quality is determined by the sum of deviations between objects and the representative object of th ecorresponding cluster, which the method tries to minimize. 
+Thus, the iteration continue until the representatve object in each of the clustere becomes the mediod. 
+A medoid object closest to the center of the cluster. 
+The algroithm is poorly scalable for large data. 
+Methods like CLARANS (Clustering Large Applications based on RANdomized Search) algo which complements the k-mediods method. 
+For multidimensional clustering, the PROCLUS (Projected Clustering) algo is constructed. 

@@ -1,0 +1,8 @@
+A metric or a distance measure is an essential concept in clustering because it is used to determine the similarity between objects. 
+Befor applying a distance measure the objects, we have to make a vector of object charactersitic usually this is a set of numerical values such as height or weight. 
+Also, some algorithms can work with categorical objects features. 
+The standard prcatice is to normalize features values. 
+Normalization ensures that each feature gives the same impact in a distance measure calculation. 
+There are many distance measure functions that can be used in the scope of the clustering task. 
+The most popular ones used for numerical properties are Euclidean distance, Squared Euclidean distance, Manhattan distance, and CHebyshev distance. 
+
