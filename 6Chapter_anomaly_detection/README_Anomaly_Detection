@@ -1,0 +1,4 @@
+Anomaly detection is where we search for unexpected values in a given dataset. 
+An anomaly is a system behavior deviation or data value deviation from the standard value. 
+There are other names for anomalies such as outliers, errors, deviations, and exceptions. 
+They can occur in data that's of deiverse nature and structure as a result of technical failures, accidents, deliberate hacks, and more.

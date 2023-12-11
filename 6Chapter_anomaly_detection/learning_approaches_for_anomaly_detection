@@ -1,0 +1,25 @@
+	Below are straghtforward methods we can use for anomaly detection. 
+
+		1) Detectiong anomalies with statistical tests 
+			A) Statistical tests are usually used to catch extreme values for individual features. 
+Z-score measure is a well know test. 
+
+		2) Detecting anomalies with the local outliner factor method 
+			A) These methods assume that there is a specific metice in the object space that helps us fine anomalies. 
+The general assumption when we use distance-based methods for anomaly detection is that the anomaly only has a few neighbors, while a normal point has many. 
+
+		3) Detecting anomalies with isolation forest
+			A) A random partitioning of the feature space is carried out so that, on average, isolated points are cut off from normal ones. 
+The final result is averaged over several runs of the stochastic algorithm, and the result will from an isolation forest of correspoinding trees. 
+The isolation tree algorithm then builds a random binary decision tree. 
+The root of the tree is the whole feature space. 
+
+		4) Detecting anomalies with One-Class SVM (OCSVM)
+			A)The support vector method is a bindary classification method beased on using a hyperplaen to divide objects into classes. 
+The dimensions of the hyperplane are always chosen so that they're less than the dimensions of the original space. 
+OCSVM is an abdaption of the support vector method that focuses on anomaly detection. 
+The resulting optimization problem includes an improvment for dtermining a small perventagge of predetermined anomalous values, which allows this method to be used to detect anomalies. 
+These anomalous values lie between the starting point and the optimal separating hyperplane. 
+All other data belonging tho the same class falls on the opposite side of the optimal separating hyperplane. 
+
+		5) Denstiy estimation approach for anomaly detection
