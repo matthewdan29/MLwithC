@@ -1,0 +1,4 @@
+Dimensionality reduction is where you tranfer data that has a higher dimension into a new data representation with a lower dimension, all while preserving the most crucial information from the original data. 
+Such a transformation can help us visualize multidimensional space, which can be useful in the data exploration stage or when identifying the most relevant features in dataset samples. 
+Some ML techniques can perform better or faster if our data has a smaller number of features since it can consume fewer computational resources. 
+The main purpose of this kind of transformation is to save the essential features those features that hold the most critical information present in original data. 

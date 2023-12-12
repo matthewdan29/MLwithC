@@ -1,0 +1,17 @@
+Multidimensional scaling (MDS) can be considered as an alternative to factor analysis when, in addition to the correlation matrices, and arbitrary type of object similarity matrix can be used as input data. 
+MDS is not so much a formal mathematical procedure but rather a method of efficiently placing objects, thus keeping an appropriate distance between them in a new feature space. 
+The dimension of the new space in MDS is always substantially less than the original space. 
+The data that's used for analysis by MDS is often obtained from the matrix of pairwise comparrisons of objects. 
+The main MDS algorithm's goal is to restore the unknown dimension, 'P', of the analyzed feature space and assign coordinates to each object in such a way that the calculated pairwise Euclidean distances between the objects coincide as much as possible with the specified pairwise comparison matrix. 
+We are talking about restoring the coordinates of the new reduced feature space with the accuracy of orthogonal transformation, ensuring the pairwise distances between the objects do not change. 
+The general MDS algo follows these steps: 
+
+	1) Computes the squared proximity matrix, D^(2) = [D^2(sub(i*j))]. 
+
+	2) Applies double centering, B = -(1/2)JD^(2)J, using the centering matrix, J = I - (1/n)11', where 'n' is the number of objects. 
+
+	3) Determines the 'm' largest eigenvalues, lambda(sub(1)), lambda(sub(1)) ... lambda(sub(m)), and the corresponding eigenvectors, e(sub(1)), e(sub(2)), ..., e(sub(m)) of 'B' 
+
+	4) Computes X = E(sub(m))ALF^(1/2)(sub(m)) where 'E(sub(m))' is the matrix of 'm' eigencectors and ALF(sub(m)) is the diagonal matrix of 'm' eigenvalues of 'B'. 
+
+

@@ -1,0 +1,26 @@
+The IsoMap algo is based on the manifold projection technique.
+The mainfold is a topological space that locally resembles the Euclidian space near each point. 
+The basics of applying manifold projection techniques are to search for a manifold that is close to the data, project the data onto the manifold, and then unfold it. 
+The most popular technique that's used to find the manifold is to build a graph based on information about data points. 
+Usually, these data points are placed into the graph nodes, and the edges simulate the relationships between the data points. 
+
+The IsoMap algo depends on two parameters: 
+	1) The number of neighbors, k, used to search for geodetic distances 
+	
+	2) the dimension of the final space, m 
+
+
+In brief, the IsoMap algo follows these steps: 
+
+		1) First, it constructs a graph representing geodesic distances. 
+For each point, we search the k nearest neighbors and construct a weight, undirected graph from the distances to these nearest neightbors. 
+The edge weight is the Euclidean distance to the neighbor. 
+
+		2) Using an algo to find the shortest distance in the graph, for example, Dijkstra's algorithm, we need to find the shortest distance between each pair of vertices. 
+We can consider this distance as a geodesic distance on a manifold. 
+
+		3) based on the matrix of pairwise geodesic distances we obtained in the previous step, train the MDS algo. 
+
+		4) The MDS algorithm associates a set of points in the m-dimensional space with the initial set of distances. 
+
+

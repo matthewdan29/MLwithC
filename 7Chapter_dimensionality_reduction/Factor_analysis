@@ -1,0 +1,24 @@
+Factor analysis is used to reduce the number of variables that are used to describe data and determine the relationships between them. 
+During the analysis, variables that correlate with each other are combined into one factor. 
+As a result, the dispersion between componets is redistributed, and the structure of factors becomes more understnadable. 
+After combining the carables, the correlation of components within each factor becomes higher than their correlation with components from other factors. 
+It is assumed that known varables depend on a smaller number of unkown variables and that we have a random error that can be expressed. 
+
+The Concept of factor(caribale) load is essential. 
+It is used to describe the role of the factor when we wish to form a specific vector from a new basis. 
+The essence of factor analysis is the procedure of rotating factors, that is, redistributing the dispersion according to a specific method. 
+
+Dimensionality reduction occurs while transitioning to a system of factors that are representatives of groups, and the other factors are discarded. 
+There are several commonly used criteria for determining the number of factors. 
+The general factor analysis algorithm follow these steps: 
+
+	1) Calculates the correlation matrix. 
+	
+	2) Selects the number of factors for inclusion, for example, with the Kaiser criterion. 
+
+	3) Extracts the initial set of factors. 
+There are several different extration methods, including maximum likelihood, principal component analysis and principal axis extraction. 
+
+	4) Rotates the factors to a final solution that is equal to the one that was obtained in the initial extration but that has the most straightforward interpreteation. 
+
+

@@ -1,0 +1,30 @@
+Classic PCA is a linear projection method that works well if the data is linearly separable. 
+In the case of linearly non-separable data, a non-linear approach is required. 
+The basic idea of working with linearly inseparable data is to project it into a space with a larger number of dimensions, where it becomes linearly separable. 
+We can choose a non-linear mapping function, so that the sample mapping, x, can be rewritten as x -> (non-linear mapping function)(X), 
+This is called the kernel function. 
+The term kernel describes a function that calculates the scalar product of mapping. 
+This scalar product can be interpreted as the distance measured in the new space. 
+In other workds the non-linear mapping mapping function maps the original d-dimensional elements into the k-dimensional feature space of a higher dimension by creating non-linear combinations of the original objects. 
+
+In a linear PCA approach, we are interested in the principal components that maximize the variance in the dataset. 
+We can maximize variance by calculating the eigenvectors that correspond to the largest eigenvalues based on the covariance matrix of our data and project our data onto these eigenvectors. 
+This approach can be generalized to data that is mapped into a high dimension space using the kernel function. 
+But in practice, the covariance matrix in a multidimensional space is not explicity calculated since we can use a method called the kernel trick. 
+The kernel trick allow us to project data onto the principal components without explicitly calculating the projections, which is much mor efficient. 
+The general approach is as follows: 
+
+	1) Compute the kernel matrix equal to K(sub(i*j)) = k(x(sub(i)), x(sub(j))). 
+	2) Make it so that it has a zero mean value, K' K - 1(sub(n))K-k1(sub(n)), where 1(sub(n)) is a matrix of N * N size with 1/N elements. 
+
+	3) Calculate the eigenvalues and eigenvectors of K. 
+
+	4) Sort the eigenvecttors in descending order, according to their eigenvalues. 
+
+	5) Take 'n' eigenvectors that correspond to the largest eigenvalues, where 'n' is the number of dimensions of a new feature space. 
+
+These eigenvectors are projections of our data onto the corresponding main components. 
+The main difficulty of this process is selecting the correct kernel and configuring its hyperparameters. 
+Two frequently used kernels are polynomial ker k(x,y) = (x^t * y + c)^d and the gaussian (RBF) k(x,y) = exp(... ||x - y||^2(sub(2))) onles. 
+
+

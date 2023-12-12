@@ -1,0 +1,2 @@
+Autoencoders represent a particular class of neural networks that are configured so that the output of the autoencoder is as close as possible to the input signal. 
+In its most straightforward representation, the autoencoder can be modeled as a multilayer perceptron in which the number of neurons in the output layer is equal to the number of inputs. 

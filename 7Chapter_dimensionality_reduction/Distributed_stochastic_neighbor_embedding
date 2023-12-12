@@ -1,0 +1,11 @@
+The stochastic neighbor embedding (SNE) problem is formulated as follws: we have a dataset with points described by a multidimensional varable with a dimension of space substantially high than three. 
+It is necessary to obtaion a new variable that exists in a two dimensional or three dimensional space that would maximally preserve the structure and patterens in the original data. 
+The difference between t-SNE and the classic SNE lies in the modifications that simplify the process of finding the global minima. 
+The main modification is replacing the normal distribution with the students's t-distribution for low dimensional data. 
+SNE begins by converting the multidimensional euclidean distance between points into conditional probabilites that reflect the similarity of points. 
+
+Lets imagine that springs connect all the mapping points. 
+The stiffness of the string connecting points i and j depends on the difference between the similarity of two points in a multidimensional space and two points in a mapping space. 
+In this anaolgy, the gradient is the resultant force that acts on a point in the mapping space. 
+If we let the systems go, after some time it results in balance, and this is the desired distribution. 
+Algorithmically, it searches for balance while taking the moments into account

@@ -1,0 +1,8 @@
+Singular value decomposition (SVD) is an important method that's used to analyze data. 
+The resulting matrix decomposition has a meaningful interpretation from a ML point of view. 
+It can also be used to calcuate PCA. 
+SVD is rather slow. 
+Therefore, when the matrices are too large, randomized algorithms are used. 
+However, the SVD calculation is computationally more efficient than the calculations for the covariance matrix and its eigenvalues in the original PCA approach. 
+Therefore, PCA is often implemented in terms of SVD. 
+

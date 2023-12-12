@@ -1,0 +1,9 @@
+Principal component analysis (PCA) is one of the most intuitively simple and frequently used methods for appying dimension reduction to data and projecting it onto an orthogonal(Relating to or composed of right angles or relating to a matrix whose transpose equals its inverse) subspace of features. 
+It can be represented as the assumption that all our observations look like some ellispoid in the subspace of our original space. 
+Our new basis in this space coincides with axes of this ellipsoid(is a surface that can be obtained from a sphere by deforming it by means of directional scalings, or more generally, of an affine transformation). 
+This assumption allows us to get rid of strongly correlated features simultaneously since the basis vectors of the space we project them onto are orthogonal 
+
+The dimension of this ellipsoid is equal to the dimension of the original space, but our assumption that the data lies in a subspace of a smaller dimension allows us to discard the other subspaces in the new projection; namely, the subspace with the least extension of the ellipsoid. 
+We can do this greedily, choosing a new element one by one on the basis of our new subspace, and then taking the axis of the ellipsoid with maximum dispersion successively from the remaining dimensions. 
+
+

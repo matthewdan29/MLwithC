@@ -1,0 +1,10 @@
+Linear discriminant analysis (LDA) is a type of multivariate analysis that allows us to estimate differences between two or more groups of objects at the same time. 
+The basis of discriminant analysis is the assumption that the descriptions of the objects of each 'K^(th)' class are instances of a multidimensional random variable that's distributed according to the normal law.
+
+LDA algorithm for the case of two classes. 
+Lets the discriminant cariables, 'x', be the axes of the 'm'-dimensional Euclidean space. 
+Each object is a point of this space with coordinates representing the fixed values of each variable. 
+If both classes differ from each other in observable variables, they can be representd as clusters of points in different regions of the considered space that may partially overlap. 
+To determine the position of each class, we can calcuate its centroid, which is an imaginary point whose coordinates are the average calues of the cariables in the class. 
+The task of discriminant analysis is to create an additional 'z' axis that passes throught a cloud of points in such a way that the projections on it provides the best separability into two classes. 
+Its position is given by a linear discriminant function with weights, "Bj", that determine the contribution of each initial variable. 

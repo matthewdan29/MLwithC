@@ -1,0 +1,21 @@
+The independent component analysis (ICA) method was proposed as a way to solve the problem of blind signal separation (BSS); that is, selecting independent signals from mixed data. 
+Suppose we have two people in the same room who are talking, generating acoustic waves. 
+We have two microphones in different parts of the room, recording sound. 
+The analysis system receiveds two signals from the two microphones, each of which is a digitized mixture of two acoustic waves -- one from people speaking and one from some other noise. 
+Our goal is to select our initial signals from the incoming mixtures. 
+Mathematically, the problem represent the incoming mixture in the form of a linear combination, where 'a' represents the displacement coefficients and 'S' represents the values of the vector of indepenent components:
+
+	1) Independent components must be statistically independent. 
+Roughly speaking, the values of one vector of an independent compnent do not affect the values of another component. 
+
+	2) Independent components must have a non-Gaussian distribution
+
+The ICA algo performs the following steps: 
+	
+	1) choose the initial value of 'w' 
+
+	2) Calculate 'w' => E{xg'(w^t*x)} - E{g'(w^t*x)}w, where g(x) = (dG(z))/(dz) is the derivative of the function, G(z). 
+
+	3) Normalizes 'w' => (w)/(||w||)
+
+	4) Repeats the previous two steps until 'w' stops changing 

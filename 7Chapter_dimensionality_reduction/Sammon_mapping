@@ -1,0 +1,5 @@
+Sammon mapping is one of the first non linear dimensionality reduction algo. 
+In contrast to traditional dimensionality reduction methods, such as PCA, Sammon mapping does not define a data conversion function directly. 
+On the contrary, it only determines the measure of how well the conversion results correspond to the structure of the original dataset. 
+It does not tyr to find the optimal transformation of the original data; instead, it searches for another dataset of lower dimensions with a structrure that's as close to the original one as possible. 
+
