@@ -1,0 +1,24 @@
+The SVM method is a set of algorithms used for classification and regression analysis tasks. 
+Considering that in an N-dimensional space, each object belongs to one of two classes, SVM generates an (N-1)-dimensional hyperplane to divide these points into two groups. 
+Its similar to an on paper depiction of points of two different types that can be linearly divided. 
+The SVM selects the hyperplane, which is characterized by the maximum distance from the nearest group elements. 
+The input data can be separated using various hyperplanes. 
+The best hyperplane is a hyperplane with the maximum resulting separation and the maximum resulting difference between the two classes. 
+Imagine the data oints on the plane. 
+The separator is just a straight line. 
+
+Think of a set of points on a coordanite plane distrubted any way and a line that cuts through such a plane that divides them into 2 sets. 
+Then, choose a straight line as far as possible from the points, maximizing the distance from it to the nearest point on each side. 
+If such a line exists, then it is called the maximum margin hyperplane. 
+Intuitively, a good separation is achieved due to the hyperplane itself, since, in gineral, the bigger the distance, the smaller the classifier error. 
+
+Another idea of the SVM method in the case of the impossibility of a linear separation of classes is the transition to a space of higher dimension, in which such a separation is possible. 
+While the original problem can be formulated in a finite-dimensional space, it often happens that the samples for discrimination are not linearly separable in this space. 
+Therefore, it is suggested to map the original finite dimensional space into a larger dimension space, which makes the separation much easier. 
+To keep the computational load reasonable, the mappings used in support vector algorithms provide ease of calculating points in terms of variables in the original space, specifically in terms of the kernel function. 
+
+In general, the more support vectors the method chooses, the better it generalizes.
+Any training example that does not constitute a support vector is correctly classified if it appears in the test set because the border between positive and negative examples is still in the same place.
+The expected error rate of the support vector method is as a rule equal to the proportion of examples that are support vectors. 
+As the number of measurements grows, this proportion also grows, so the method is not immune from the curse of dimensionality, but it ismore resistant to it than most algorithms. 
+Also, the method of SVMs, is not only limited to the classification task but can also be adapted for solving regression tasks too. 

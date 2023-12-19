@@ -1,0 +1,10 @@
+Most of the existing methods of multi-classification are either based on binary classifiers or are reduced to them. 
+The general idea of such an approach is to use a set of binary classifiers trained to separate different groups of objects from each other. 
+With such a multi-class classification, various voting schemes for a set of binary classifiers are used. 
+
+IN the one-against-all strategry for N classes, N classifier are trained, each of which separates its class from all other classes. 
+At the recongnition stage, the unknown vector X is fed to all N classifiers. 
+The membership of the vector X is determined by the classifier that gave the high estimate. 
+This approach can meet the problem of class imbalances when they arise. 
+Even if the task of a multi class classification is initially balanced when training a binary classifier, the ratio of the number of samples in each binary problem increases with an increasein the number of classes, which therefor significantly affects task with a notable number of of classes. 
+

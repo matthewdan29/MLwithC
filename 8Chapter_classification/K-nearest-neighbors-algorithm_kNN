@@ -1,0 +1,45 @@
+The kNN is a popular classification method that is sometimes used in regression problems. 
+It is one of the most natural approaches to classification. 
+The essence of the method is to classify the current item by the most prevailing class of its neighbors. 
+Formally, the basis of the method is the hypothesis of compactness: if the metric of the distance between the examples is clarified successfully, then similar examples are more likely to be in the sma class. 
+If you don't know what type of product to specify in the ad for a Bluetooth headset, you can find five similar headset ads. 
+If four of them are ategorized as Accessories and only one as Hardware, common sense will tell you that your ad should probably be in the Accessories category .
+
+IN general, to classify an object, you must perform the following operations sequentially: 
+
+		1) Calculate the distance from the object to other objects in the training dataset. 
+
+		2) Select the k of training objects, with the minimal distance to the object that is classified. 
+
+		3) Set the classifying object class to the class most often found among the nearest k neighbors. 
+
+The function for calculating the distance must meet the following rule: 
+
+	1) d(x,y) >= 0
+
+	2) d(x,y) = 0 only when x = y
+
+	3) d(x, y) = d(y, x)
+
+	4) d(x,z) <= d(x, y) + d(y, z) in the case when points x, y, z don't lie on one straight line. 
+
+When finding the distance, the importance of the attributes is sometimes taken into account. 
+Usually, attribute relevance can be determined subjectively by an expert or analyst, and is based on their own experience, expertise, and problem interpretation(if you understand outlier and the last dir then you know). 
+
+The choice of class for the object of classification can also be different, and there are two main approaches to make this choice: unweighted voting and weighted voting. 
+
+For unweighted voting, we determine how many objects have the right to vote in the classification task by specifying the k number. 
+We identify such objects by their minimal distance to the new object. 
+The individual distance to each object is no longer critical for voting. 
+All have equal rights in a class definition. 
+Each existing object votes for the class to which it belongs. 
+We assign a class with the most votes to a new object. 
+However there may be a problem if several classes scored an equal number of votes. Weighted voting removes this problem. 
+During the weighted vote, we also take into account the distance to the new object. 
+The smaller the distance, the more significant the contribution of the vote. 
+
+A notable feature of the kNN approach is its laziness. 
+Laziness means that the calculations begin only at the moment of the classification. 
+When using training samples with the kNN method, we don't simply build the model, but also do sample classification simultaneously. 
+Not that the method of nearest neighbors is a well-studied approach. 
+kNN is often ineffective in real world tasks. 

@@ -1,0 +1,13 @@
+KRR combines linear ridge regression with the kernel trick and can be used for classification problems. 
+It learns a linear funciton in the higher-dimensional space produced by the chosen kernel and training data. 
+For non-linear kernels, it learns a non-linear function in the original space. 
+
+The model learned by KRR is identical to the SVM model, but these approaches have the following differences: 
+
+		1) The KRR method uses squared error loss, while the SVM model uses insensitive loss or hinge loss for classification. 
+
+		2) In constrast to the SVM mehthod, the KRR training can be completed in the closed-form so that it can be trained faster from medium-sized datasets. 
+
+		3) The learned KRR model is non-sparse and can be slower than the SVM model when it comes to prediction times. 
+
+

@@ -1,0 +1,6 @@
+In ML the task of classification is that of dividing a set of observations into groups called classes, based on an analysis of their formal description. 
+Each observation is mapped to certain group or nominal category based on a certain qualitative property. 
+Classification is a supervised task because it requires known classes for training samples. 
+Labeling of a training set is usually done manually, which the involvement of specialists in the given field of study. 
+Its also notable that if classes are not initially defined, then there will be a problem with clustering. 
+Furthermore, in the classification task, there may be more than two classes, and each of the objects may belong to more than one class. 

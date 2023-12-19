@@ -1,0 +1,13 @@
+Logistic regression determines the degree of dependence between the categorical dependent and one or more independent variables by using the logistic function. 
+It aims to find the calues of the coefficients for the input variables, as with linear regression. 
+The difference, in the case of logistic regression, is that the output value is converted by using a non-linear function. 
+The logistic function essentially looks like a big letter 'S' and converts any value to a number in a range from 0 to 1. 
+This property is useful because we can apply the rule to the output of the logistic function to bind 0 and 1 to a class prediction. 
+
+For example, if the result of the function is less than 0.5 then the output is 0. 
+Predition is not just a simple answer either, and we can interpret it as probability of being classified as +1.
+
+In many tasks, this interpretation is an essential business requirement. 
+In the task of credit scoring, where logistic regression is traditionally used, the probaility of a loan being defaulted on is a common prediction. 
+As with the case of linear regression, logistic regression performs the task better if outliers and correlating variables are removed. 
+The logistic regression model can be quickly trained and is well suited for binary classification problems 
