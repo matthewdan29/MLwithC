@@ -1,0 +1,10 @@
+The classical implementation of the algorithm is based on the principle of k-nearest neighbors (kNN). 
+For every user, we look for the k most similar to them. 
+Then, we supplement the information about the user with known data from their neighbors. 
+If it is known that your neighbors are delighted with a movie and you have not watched it for some reason, this is a good reason to recommend this movie. 
+
+An interesting development in the collaborative approach is trust-based recommendations, which take into account not only the proximity of people according to their interests, but also their social proximity and the degree of trust between them, 
+For example we see that on Facebook, a girl occasionally vistis a page that has her friend's audio recordings, then she trusts her musical taste. 
+Therfore, when making recommendations to the girl, you can add new songs from her friends's playlist. 
+
+

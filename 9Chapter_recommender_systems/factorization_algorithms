@@ -1,0 +1,31 @@
+It would be nice to descibe the interest of the user with more extensive features not in the format of they love movies X, Y, and Z but in the format of they love romantic comedies. 
+Besides the fact that it increaset the generalizability of the model, it also solves the problem of having a large data dimension after all, the interests are described not by the items vector, but by a significantly smaller preference vector. 
+Such approaches are also called spectral decomposition or high-frequency filetering(since we remove the noise and leave the useful signal). 
+There are many different types of matrix decomposition in algebra, and one of the most commonly used is called Singular Value Decomposition (SVD). 
+
+The SVD method was used to select pages that are similar in meaning but not in content. 
+It has started being used in recommendations. 
+The method is based on the decomposition of the original R rating matrix into a product of three matrices, R = U * D * S, where the size of the matrices are (k,m) = (k,r) * (r,r) * (r,m) and r is the rank of the decompostion which is the parameter characterizing the degreee of detail decomposition. 
+
+Applying this decompostion to our matrix of preferences, we can get the following two matrices of factors: 
+
+		1) U: A compact description of user preferences. 
+
+		2) S: A compact descriptiong of the characteristics of the product. 
+
+It is important that with this approach, we do not know which particular charateristics corrspond to the factors in the reduced descriptions; for us, they are encoded with some numbers. 
+Therefore, SVD is an uninterpreted model. 
+It is sufficient to nultiply the matrix of factors to obtain an approximation ofthe matrix of preferences. 
+By doing this, we get a rating for all customer product pairs. 
+
+A typical family of such algorithms is called non-negative matrix factorization(NMF). 
+As a rule, this calculation of such expansions is very computatioinally expensive. 
+Therefore, in practice, they often resort to their approximate iterative variants. 
+ALS is a popular iterative algorithm for decomposing sa matrix of preferences into a product of two matrices: user factors (U) and product factors (I). 
+It works on the principle of minmizing the root-mean-square error (RMSE) on the affixed rating. 
+Optimization takes place alternatiely first by user factors, then by product factors.
+Also, to avoid retraining, the regularization coefficent are added to the RMSE.
+If we supplement the matrix of preferences with a new dimension containing information about the user or product, then we can work not with the matrix of preferences, but with the tensor. 
+Thus, we use more available information and possibly get a more accurate model. 
+
+NOTE: I understand it was no way of getting past all this information if your going to analyze data and implament ML/AI solutions. 

@@ -1,0 +1,20 @@
+A cold start is a typical situation when a sufficient amount of data has not yet been accumulated for the correct operation of the recommender system (example when a product is new or is just rarely bought). 
+If the ratings of only three users estimate the average rating, such an assessment is not reliable, and users understand this. 
+In such situation, ratings are often artificially adjusted. 
+
+The first way to do this is to show not the average values, but he smoothed average. 
+With a small number of ratings, the displayed rating leans more to a specific safe average indicator, and as soon as a sufficient number of new ratings are typed, the averaging adjustment stops operating. 
+
+Another approach is to calculate confidence intervals for each rating. 
+Mathematically, the more estimates we have, the smaller the variation of the average will be and, therefore, the more confidence we have in its accuracy. 
+
+We can display, for example, the lower limit of the interval as a rating. 
+At the same time, it is clear that such a system is quite conservative, with a tendency to underestimate ratings for new items. 
+
+Since the estimates are limited to a specific scale the usual methods for calculating the confidence interval are poorly applicable here, dur to the distribution tails that go to infinity, and the symmetry of the interval itself. 
+There is a more accurate way to calculate it -- the WIlson CL. 
+
+The cold start problem is relevant for non-personalized recommendation too. 
+The general approach here is to replace what currently cannot be calculated by different heuristics example, replace it with an average rating, use a simpler algorithm, or not use the product at all until the data is collected. 
+
+Another issue that should be considered when we develop a recommender system is the relevance of recommendations, which considers factors other than the user's interests for example it cna be the fresness of a publication or a user's rating. 

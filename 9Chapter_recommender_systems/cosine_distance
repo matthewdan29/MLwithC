@@ -1,0 +1,5 @@
+Cosine distance is another classic measuring factor. 
+If you look closely, the cosine of the angle between the standardized vectors is Pearson's correlation, the same formula. 
+This distance uses cosine properties: if the two vectors are co-directed then the cosine of the angle between them is 1. 
+Conversely, the cosine of the angle between perpendicular vectors is 0. 
+

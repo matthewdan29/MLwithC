@@ -1,0 +1,35 @@
+A recommender system's task is to inform a user about an object that could be the most interesting to them at a given time. 
+Most often, such an object is a product or service, but it may be information. 
+Despite the many existing algorithms, we can divide recommender systems into several basic approaches. 
+The most common are as follows: 
+		1) System-based: Non-personal models based on the average product rating. 
+	
+		2) Content-based: Model based on the intersection of product descriptions and user interests 
+
+		3) Matrix factorization: method based on the perferences matrix decomposition 
+
+The basis of any recommender system is the perferences matrix. 
+The preferences matrix has all users of the service laid on one of the axes, and recommendation objects on the other. 
+The recommendation objects are usually called items. 
+At the intersection of rows and columns (user, item), this matrix is filled with ratings this is a known indicator of user interest in this product, expressed on a given scale.
+Users usually evaluate only a small number of the items in the catalog, and the task of the recommender system is to summarize this information and predict the attitude the user might have toward other items. 
+
+People's consumption patterns are different and new products do not have to be recommended all the time. 
+You can show repeated items. 
+According to this principle, there are the following two groups of items: 
+
+	1) Repeatable: For example shampoos or razors that are alwasy needed. 
+
+	2) Unrepeatable: For example, books or films that are rarely purchased repeatedlly 
+
+The essential part of datasets used to build reommendation models is user reactions to different objects or items. 
+These reactions are typically named as user ratings of objects. 
+We can obtain user ratings in the following two ways: 
+
+		1) Explicit ratings: The user gives their own rating for the product, leaves a review, or likes the page. 
+
+		2) implicit ratings: the user clearly does not express their attitude, but an indirect conclusion can be made from their actions. 
+For example, if they bought a product, it means they like it; if they read the description for a long time, it means there is serious interest. 
+it is also essential to distinguish between the terms prediciton and the recommendation itself. 
+How to show something is a separate task from the task of what to show. 
+How to show is a task that uses the estimates obtained in the prediction step, and can be implemented in different ways. 

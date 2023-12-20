@@ -1,0 +1,61 @@
+Recommender system problem formalize. 
+We have a set of users, u 'in' U, a set of items, i 'in' I, and a set of estimates, (r(u)i, u, i, ...) 'in' D. 
+Each estimate is given by user "u". object "i", its result "r u i", and, possibly, some other characteristics. 
+
+The main idea behind collaborative filtering is that similar users usually like similar objects. 
+Let's start with the simplest methods: 
+	1) Select some conditional measures of similarity of users according to their history of sim(u,v) ratings. 
+
+	2) unite users into groups (clusters) so that similar users will end up in the same cluster: u -> F(u). 
+
+	3) Predict the item's user rating as the cluster's average rating for this object: 
+
+	
+This algorithm has several problems: 
+	1) There is nothing to recommend to new or atyipical users. 
+For such users, there is no suitable cluster with similar users. 
+
+	2) It ignores the specificity of each user. 
+In a sense, we divide all users into classes (templates). 
+
+	3) If no one in the cluster has rated the item, the prediction will not work. 
+
+These approcahes have the following disadvantages: 
+
+	1) Cold start problem 
+
+	2) Bad predictions for new and atypical users or items
+
+	3) trivial recommendations 
+
+	4) Resource intensity calculations 
+
+To overcome these problems, you can use the SVD. 
+The preference matrix can be decomposed into the product of three matrices. 
+
+Using this approach, we can identify the hidden features of items and user interests by user history. 
+It may happen that at the first coordinate of the vector, each user has a number indicating whether the user is more likely to be a boy or a girl, and the secod coordinate is a number reflecting the approximate age of the user. 
+IN the item, the first coordinate shows whether it is more interesting to boys or girls, and the secod one shows the age group of user this item appeals to. 
+
+However, there are also several problems. 
+The first one is the preferences matrix 'R' which is not entirely known to us, so we cannot merely take its SVD decomposition. 
+Secondly, the SVD decompostion is not the only one, so even if we find at least some decomposition, it is unlikely that it is optimal for our task. 
+
+We cannot find the SVD decomposition of the matrix since we do not know the matrix itself. 
+But we can take advantage of this idea and come up with a prediction model that works like SVD. 
+Our model depends on many parameters vectors of users and items. 
+For the given parameters, to predict the estimate, we take the user vector, the vector of the item, and get their scalar product. 
+But since we do not know vectors, they still need to be obtained. 
+The idea is that we have user ratings with which we can find optimal parameters so that our model can predict these estimates as accuratly as possible. 
+We also want ot make fewer mistakes in the future, but we do not know what estimates we need. 
+Accordingly, we cannot optimize parameters. 
+We already know the ratings given by users, so we can try to choose parameters based on the estimates we already have to minimize the error. 
+We can also add another term, the regularizer. 
+Regularization is needed to combat overfitting. 
+There are many parameters: for each user, for each item, we have our vector that we want to optimize. 
+The most well-known method for optimizing functions is gradient descent (GD). 
+Suppose we have a function of many variables, and we want to optimize it. 
+We take an initial value, and then we look where we can move to minimize this value. 
+The GD method is an iterative algorithm: it repeatedly takes the parameters of a certain point, looks at the gradient, and steps against its direction.
+
+I skiped the finding the under prabula because the math methods behind it is required to understanding the steps. HINT: f''(x) = 0 will help you find the shifts in increasing and decreasing. along with finding local and global min/max with f'(x) = 0. explaining such methods would mean I don't think you understand basic concepts. 

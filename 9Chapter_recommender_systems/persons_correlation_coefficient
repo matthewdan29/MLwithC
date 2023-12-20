@@ -1,0 +1,3 @@
+This measure is a classic coefficient, which is quite applicable when comparing vectors. 
+Its primary disadvantage is that when the intersection is estimated as low, then the correlation can be high by accident. 
+To combat accidental high correlation, you can multiply by a factor of 50/min (50, rating intersection) or any other damping factor, the effect of which decreases with an increasing number of estimates. 

@@ -1,0 +1,9 @@
+Recommender systems are algorithms, programs, and services whose main task is to use data to predict which objects (goods or services) are of intrest to a user.
+There are two main types of recommender systems: 
+	1) content based - Contenet based recommender systems are based on data collected from specific products. 
+They recommend objects to a user that are similar to ones that user has previously acquired or shown interst in. 
+	
+	2) collaborative filtering - Collaborative filtering recommender systems filter out objects that a user might like based on the reaction history of other similar users of these systems. 
+They usually consider the user's previous reactions, too. 
+
+

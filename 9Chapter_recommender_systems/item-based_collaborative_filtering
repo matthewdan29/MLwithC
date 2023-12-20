@@ -1,0 +1,9 @@
+For each client, a user-based collaborative filtering system searches a group of customers who are similar to this user in terms of previous purchases, and then the system averages their perferences. 
+These average preferences serve as recommendations for the user. 
+IN the case of item based collaborative filtering, the nearest neighbors are searched for on a variety of products columns of a preference matrix and the average occurs precisely according to them. 
+
+If some products are meaningfully similar to each other, then users' reactions to these products will be the same. 
+Therefore, when we see that some products have a strong correlation between their estimates, this may indicate that these products are equivalent to each other.
+The main advantage of the item-based approach over the user-based approach is lower computation complexity. 
+Estimation of the proximity of products is much more accurate than the assessment of the proximity of users. 
+

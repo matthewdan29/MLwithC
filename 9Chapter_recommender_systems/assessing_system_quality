@@ -1,0 +1,20 @@
+Testing a recommender system is a complicated process that alwasys psoe many question, mainly due to the ambiguity of the concept of quality. 
+IN general, in ML problems, there are the following two main approaches to testing: 
+		1) Offline model testing on historical data using retro tests
+
+		2) Testing the model using A/B testing(we run several options, and see which one gives the best result)
+
+Both of the preceding approcaches are actively used in the development of recommender systems. 
+The main limitation that we have to face is that we can evaluate the accuracy of the forcast only on those products that the user has already evaluated or rated. 
+The standard approach is cross-validation, with the leave-one-out and leave-p-out methods. 
+Multiple repetitions of the test and averaging the results provides a more stable assessment of quality. 
+
+We can divide all quality metrics into the following three categories: 
+		
+		1) Prediction accuracy: Estimates the accuracy of the predicted rating 
+		
+		2) Decision support: evaluates the relevance of the recommendations. 
+
+		3) Rank accuracy metrics: evaluates the quality of the ranking of recommendations issued
+
+Unfortunatly, there is no single recommended metric for all occasions, and everyone who is involded in testing a recommender system selects it to fit thier goals. 

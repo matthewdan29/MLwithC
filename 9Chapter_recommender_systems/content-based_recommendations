@@ -1,0 +1,6 @@
+Personal recommendations use the maximum information available about the user primarily, information on their pervious purchases. 
+Content based filetering was one of the first approaches to this. 
+The product's description (content) is compared with the interests of the user, obtained from their pervious assessments. 
+The more the product meets these interests, the high the potential interest of the user. 
+The ovious requirement here is that all products in the catalog should have a description. 
+

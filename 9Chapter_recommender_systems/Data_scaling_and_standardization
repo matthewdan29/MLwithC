@@ -1,0 +1,12 @@
+All users avaluate items differently. 
+If someone puts 5s in a row, instead of waiting for 4s from someone else, its better to normalize the data before calculating it that is, convert the data to a single scale, so that the algorithm can correctly compare the results with each other. 
+Naturall, the predicted estimate then needs to be converted to the original scale by inverse transformation. 
+There are several ways to normalize data, detailed as follows: 
+	
+		1) Centering (meaning-centering): From the user's ratings, subtract their average rating. 
+This type of normalization is only relevant for non-binary matrices. 
+
+		2) Standaradization (z-score): in addition to centering, this divides the user's rating by the standard deviation of the user. 
+But in this case, after the inverse transformation, the rating can go beyond the scale but such situations are quite rarae and are solved simply by rounding to the nearest acceptable estimate. 
+
+		3) Double standardization: The first time normalized by user ratings; the second time, by item ratings. 
