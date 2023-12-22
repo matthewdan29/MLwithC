@@ -1,0 +1,9 @@
+This is how artificial neurons work and how they relate to their biological analogs. 
+A nueral network is a sequence of neurons interconnected by synapses. 
+The structure of the neural network come into the world of programming directly from biology. 
+Thanks to this structure, the computer has the ability to analyze and even remember information. 
+Neural networks are based on the human brain, which contains millions of neurons that transmit information in the form of electrical impulses.
+
+Artificial neural networks are inspired by biology because they are composed of elements with similar functionalities to thos of biological neurons. 
+These elements can be organized in the way that corresponds tothe anatomy of the brain, and they demonstrate a large number of properties that are inherent in the brain. 
+They can learn from experience, generalze previous precedents to new cases, and identify significant features from input data that contain redundant information. 

@@ -1,0 +1,57 @@
+This is something very important that everyone should know below is the passage
+The first apperance of artificial neral networks can be traced to the article A logical calculus of the ideas immanent in nervous activity, which was published in 1943 by Warren McCallock and Walter Pitts.
+They proposed an early model of an artificial neuron. 
+Donald Hebb, in his 1943 book The organization of behavor, described the basic principles of neuron training. 
+These ideas were developed several years later by the neurophysiologist Frank Rosenblastt. 
+Rosenblatt invented the perceptron in 1957 as a mathematical model of the human brain's information perception. 
+THe concept was first implemented on a Mark-1 electronic machine in 1960. 
+
+Rosenblatt posted and proved the Perceptron Convergence Theorem (with the help of Blok, Joseph, Kesten, and other researcher who worked with him). 
+It showed that an elementary perceptron, trained throught error correction, regardless of the initial state of the wieght coefficients and the sequence stimuli, always leads to a solution in a finite amount of time. 
+Rosenblastt also presented evidence of some related theorems, which shows what conditions should correspond to the architecture of artificial neural networks and how they're trained. 
+Rosenblastt also showed that the architecture of the perceptron is sufficient to obtain a solution to any conceivable classification task. 
+
+This means that the perceptron is a universal system. 
+Rosenblastt himself identified two fundamental limitations of three layer perceptron: they lack the ability to generalze thier characteristics in the presence of new stimuli or new situations, and the fact that they can't deal with complex siturations, thus dividing them into simpler tasks. 
+
+Against the backdrop of the growing popularity of neural networks in 1969, a book by Marvin Minsky and Seymour Papert was published that showed the fundamental limitations of perceptrons. 
+They showed that perceptrons are fundamentally incapable of performing many important functions. 
+Moreover, at that time, the theory of parallel computing was poorly developed, and the perceptron was entirely consistent with the principles of this theory. 
+In general, Minsky showed the advantage of sequential computing over parallel computing in certain classes of problems related to invariant representation. 
+He also demonstrated that perceptrons do not have a functional advantage over analytical methods when solving problems related to forecasting. 
+Some tasks that, in principle, can be solved by a perceptron require a very long time or a large amount of memory to solve them. 
+These discoveries led to reorienting artificial intelligence researcher to the area of symbolic computing, which is the opposit of neural networks. 
+Also, due to the complexity of mathematically studying perceptrons and there being a lack of generally accepted terminology, various inaccuracies and misconceptrions arose. 
+
+Subsequently, interest in neural networks resumed, 
+In 1986, David I. Rumelhart, J. E. Hinton, and Ronald J. Williams redisvocered and developed the error backpropagation method, which made it possible to solve the problem of traing multilayer networks effectively. 
+This training method was developed back in 1975by Verbos, but at that time, it did not receive enough attention. 
+In the early 1980's various scientists came together to study the possibilities of parallel computing and showed interest in theories of cognition based on neural networks. 
+As a result, Hopfield developed a solid theoretical foundation for the use of artificial neural systems and used the so called Hopfield network as a example. 
+With the networks help, he proved that artificial neural systems could successfully solve a wide range of problems. 
+Another factor that influenced the revival of interest in ANNs was the lack of significant success in the field of symbolic computing. 
+
+Currently, terms suchas single-layer perceptron (SLP) (or just perceptron) and multilayer perceptron (MLP) are used. 
+Usually, under the layers in perceptron is a sequence of neurons, loacted at the same level and not connected. 
+
+Typically, we can distinguish between the following types of neural network layers: 
+
+	1) Input: This is just the source data or signals arriving as the input of the system (model). 
+
+	2) Hidden: This is a layer of neurons located between the input and output layers. 
+There can be more than one hidden layer.
+
+	3) Output: This is the last layer of neurons that aggregates the model's work, and its outputs areused as the result of the model's work. 
+
+The term single layer perceptron is often understood as a model that consists of an input layer and an artificial neuron aggregating this input data. 
+This term is sometimes used in conjunction with ther term Rosenblatt's perceptron, but this is not entirely correct since Rosenblatt used a randomized procedure to set up connections between input data and neurons to transfer data to a different dimension, which made it possible to the solve problems that arose when classifiying linearly non-separable data. 
+In Rosenblatt's work, a perceptron consist of S and A neuron types, and on R addr. 
+S neurons are the input layers, A neurons are the hidden layers, and the R neuron generates the model's result. 
+The terminology's ambiguity arose because the weights were used only for the R neuron, while constant weights were used between the S and A neuron types. 
+However, not that connections between these types of neurons were established accouding to a particular randomized procedure. 
+The term MLP refers to a model that consists of an input layer, a certain number of hidden neurons layers, and an output layer. 
+It should also be noted that the architecture of the perceptron includes the direction that signal propagation takes place in. 
+Other network architechures may also include feedback between neurons. 
+
+The second point that we need to pay attention to in the architecture of the perceptron is the number of connections between neurons. 
+ 

@@ -1,0 +1,6 @@
+We have seen a huge intrest in neural networks, which are successfully used in various areas business, medicine, technology, geology, physics, and so on. 
+Neural networks have come into practice wherever it is necessary to solve problems of forecasting, classification, or control. 
+This approach is attractive from an intuitive point of view because it is based on a simplified biological model of the human nervous system. 
+It arose from research in the field of artificial intelligence, namely from attemets to reprodcue the ability of biological nervous systems to learn and correct mistakes by modeling the low level structure of the brain. 
+Neural networks are compelling modeling methods that allow us to reproduce extremely complex dependencies becuase theyare nonlienar. 
+Neural networks also cope better with the curse of dimensionality than other methods that don't allow modeling dependencies for a large number of variables. 

@@ -1,0 +1,5 @@
+The artificial neuron receives a specific set of signals as input, each of which is the output of another neuron. 
+Each input is multiplied by the corresponding weight, which is the equivalent to its synaptic power. 
+Than, all the products are summed up and the result of this summation is used to determine the level of neuron activation. 
+
+

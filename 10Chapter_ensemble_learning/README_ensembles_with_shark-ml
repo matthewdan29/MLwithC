@@ -1,0 +1,31 @@
+There is only one ensemble learning algorithm in the Shark-ML library, which is the random forest, and it can be trained only for solving classification task. 
+So, far this set of samples, we will use the Brest Cancer Wisconsin (Diangostic) data set loacted at https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic). 
+It is taken from Dua, D. and Graff, C. (2019) UCI Machine Learning Respository, Irvine, CA: University of California, School of Information and Computer Science: https://archive.ics.uci.edu/ml. 
+
+There are 569 instances in this dataset, and each instance has 32 attributes: the ID, the diagnosis, and 30 real value input features. 
+The diagnosis can have two values: 
+	1) M = malignant
+	
+	2) B = benign. 
+
+Other attributes have 10 real-value features computed for each cell nuclues as follows: 
+
+	1) Radius (mean distances from the center to the perimeter)
+
+	2) Texture (standard deviation of grayscale values)
+
+	3) Perimeter
+
+	4) Area 
+
+	5) Smoothness (local variation in radius lengths)
+
+	6) Compactness 
+
+	7) Concavity (serverity of concave portions of the contour)
+
+	8) symmetry 
+
+	9) Factal dimension (coastline approximation - 1)
+
+This dataset can be used for a binary classification task. 
