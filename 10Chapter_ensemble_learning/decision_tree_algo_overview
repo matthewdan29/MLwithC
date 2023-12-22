@@ -1,0 +1,17 @@
+A decision tree is a supervised machine learning algorithm, based on how a human solves the task of forecasting or classification. 
+Generally, this is a k-dimensional tree with decision rules at the nodes and a prediction of the objective function at the leaf nodes. 
+The decision rule is a function that allows you to determine whcih of the child nodes should be used as a parent for the cosidered object. 
+There can be different types of objects inthe decision tree leaf namely, the class label assigned to the object, the probability of the class and the value of the objective function. 
+
+The Algorithm for constructing a decision tree in its general form is formed: 
+
+	1) Firstly, check the criterion for stopping the algorithm. 
+if this criterion is executed, select the prediction issued for the node. 
+Otherwise, we have to split the training set into several non interesting smaller sets.
+
+	2) IN the general case, a Q(sub(t))(x) decision rule is defined at the tnode, which takes into account a certian range of values. 
+This range is diveided into R(sub(t)) disjoint sets of objects: where R(sub(t)) is the real number of descendants of the node, and each S(sub(i)) is a set of objects that fall into the i^(th) descentdant. 
+
+	3) Divide the set in the node according to the selected rule, and reapeat the algorithm recursively for each node. 
+Most often, the Q(sub(t))(x) decision rule is simply is the feature that is x^(i(t)). 
+

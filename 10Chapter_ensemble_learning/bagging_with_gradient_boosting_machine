@@ -1,0 +1,25 @@
+The idea of bagging is that it can be used with a gradient boosting approach too, which is known as stochastic gradient boosting. 
+A new algorithm is trainedd on a sub-sample of the training set. 
+This approach can help us to imporve the quality of the ensemble and reduces the time it takes to build elementary algorithms. 
+
+Currently, the base gradient boosting machine (GBM) has many extensions for different statistical tasks: 
+
+	1) GLMBoost and GAMBoost as an enhancement of the existing generalized additive model (GAM)
+
+	2) CoxBoost for survival cures
+
+	3) RankBoost and LambdaMART for ranking
+
+Secondly, there are many implementation of the same GBM under different names and different platforms, such as: 
+
+	1) Stochastic GBM 
+
+	2)Gradient Boosted Decision Trees (GBDT)
+
+	3) Gradient Boosted Regression Trees (GBRT)
+
+	4) Multiple Additive Regression Trees (MART)
+
+	5) Generalized Boosting Machines (GBM)
+
+Furthermore, boosting can be applied and used over a long period of time in the ranking task undertaken by search engines. 

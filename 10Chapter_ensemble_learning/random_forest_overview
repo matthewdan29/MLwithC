@@ -1,0 +1,27 @@
+Decision trees are a suitable family of elementary algorithms for bagging since they are quite complicated and can utimately achive zero errors on any trainging set. 
+We can use a method that uses random subspaces to reduce the correlation between trees and avoid overfitting. 
+The elementary algorithms are trained on different subsets of the feature space, which are also randomly selected. 
+An ensemble of decision tree models using the random subspace method can be consturcted using the following algorithm. 
+
+Consider the following fundamental parameters of the algorithm and thier properties: 
+
+	1) The number of trees: The more trees, the better the quality, but the training time and algorithm's workload also increase proportionally. 
+Often, with an increasing number of trees, the quality on the training set rises, but the quality of the tes set is asymptote. 
+
+	2) The number of features for the spliting selection: with an increasing number of features, the forest's construction time increases too, and the tree becomes more uniform than before. 
+Often in classification problems, the number of attributes is chosen equal to sqr(D) and  D/3 for regression problems. 
+
+	3) Maximum tree depth: The smaller the depth, the faster the algorithm is built and will work. 
+As the depth increases, the quality during training increases dramatically. 
+The quality may also increase on the test set. 
+It is recommended to use the maximum depth. 
+When using shallow trees, changing the parameters associated with limiting the number of objects in the leaf and for splitting does not lead to a significant effect. 
+Using shallow trees is recommended in tasks with a large number of nosiy objects. 
+	
+	4) The impurity function: this is a criterion for choosing a feature for branching. 
+it is usually MSE/MAE for regression problems. 
+For classification problems, it is the Gini criterion, the entropy, or the classification error. 
+The balance and depth of trees may vary depending on the specific impurity function we choose. 
+
+We can consider a random forest as bagging decision trees, and during these trees' training, we use features from a random subset of features for each partition.
+This approach is a universal algorithm since random forest exitst for solving problems of classification, regression, clustering, anomaly search, and feature selection, among other task. 

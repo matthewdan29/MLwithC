@@ -1,0 +1,22 @@
+In general, you can use any decision rules, but those that are easist to interpret are better since they are easier to configure. 
+There is no particular point in taking something more complicated than predicates since you can create a tree with 100% accuracy on the training set, with the help of the predicates. 
+Usually, a set of decision rules are chosen to build a tree, 
+To find the optimal one among them for each particular node, we need to introduce a criterion for measuring optimality. 
+The I(x) measure is introducted for this, which is used to measure how objects are scattered, or how the classes are mix in a specific t node. 
+This measure is called th inpurity function. 
+It required for finding a maximum of DELTA'I'(X(sub(t)), t) according to allfeatures and parameters from a set of decision rules, in order to select a decision rule. 
+Now, we can generate the optimal partition for the set of objects in the current node. 
+
+We can use the MSE or the mean absolute error (MAE) as the I(t) impurity function for regression task. 
+
+The following rule can be applied as stopping criteria for building a decision tree: 
+
+	1) Limiting the maximum depth of the tree 
+
+	2) Limiting the minimum number of leaves in a tree
+
+	3) Stopping if all objects at the node belong to the same class
+
+	4) Limiting the maximum number of leave in a tree
+
+	5) Requiring that information gain is improved by at least 8 percent during splitting 

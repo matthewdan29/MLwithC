@@ -1,0 +1,27 @@
+The purpose of stacking is to use different algorithms trained on the same data as elementary models. 
+A meta-classifier is then trained on the results of the elementary algorithms or source data, also supplemented by the results of the elementary algorithms themselves. 
+Sometimes a meta-classifier uses the estimates of distribution parameters that it receives for its training, rather than the results of elementary algorithms. 
+
+The most straightforward stacking scheme is blending. 
+For this scheme, we divide the training set into two parts. 
+The first part is used to teach a set of elementary algorithms. 
+Their results can be considered new features. 
+We then use them as complementary features with the second part of the dataset and train the new meta-algorithm. 
+The problem of such a blending scheme is that neither the elementary algorithms nor the meta algorithms use the entire set of data for training. 
+To improve the quality of blending, you can average the results of serval blends trained at differenet partitions in the data. 
+
+A second way to implement stacking is to use the entire training set. 
+This is known as generalization. 
+The entire set is divided into parts, then the algorithm sequentially goes throught the folds, and teaches elementary algorithms on all the folds except the one randomly chosen fold.
+The remaining fold is used for the inferenceon the elementary algorithms. 
+The output values of elementary algorithms are interpreted as the new meta attributes calculated from the folds. 
+It is also desireable to implment several different partitions into folds, and then average the corresponding meta attributes. 
+For a meta algorithm, it make sense to apply regularization or add some normal noise to the meta attributes. 
+The coefficient with which this addition occurs in analogous to the regularization coefficient. 
+We can summarize that the basic idea behind the described approach is using a set of base algorithms; then, using another meta-algorithm, we combine their prediction, with the aim of reducing the gereralization error. 
+
+Since meta-features are the results of already trained algorithms, they strongly correlate. 
+This is a priori one of the disadvantages of this approach; the elementary algorithms are often under optimized during training to combat correlation. 
+Sometimes, to combat this drawback, the training of elemtary is used not on the target feature, but on the differences between a feature and the target. 
+
+

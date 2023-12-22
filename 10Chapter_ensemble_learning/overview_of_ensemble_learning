@@ -1,0 +1,31 @@
+The training of an ensemble of models is understood to be the procedure of training a final set of elementry algorithms, whos results are then combined to form the forecast of an aggregated classifier. 
+The model ensemble's purpose is to imporove the accuracy of the prediction of the aggregated classifier, particularly when compared with the accuracy of every single elementary classifier. 
+It is intuitively clear that combining simple classifiers can give a more accurate result than each simple classifier separately. 
+Despite that, simple classifiers can be sufficiently accurate on particular datasets, but at the same time, they can make mistake on different datasets. 
+Therefore, based on general reasoning, three reason why ensembles of classifier can be successful can be distinguished, as followed. 
+
+	1) Statistical: The classifier algorithm can be viewed as a search procedure in the space of the H hypothesis, concerned with the distribution of data in order to find the best hypothesis. 
+By learning from the final dataset, the algorithm can find many different hypotheses that describe the training sample equally well. 
+By building on ensemble of models, we average out the error of each hypothesis and reduce the influence of instabilities and randomness in the formation of new hypothiesis. 
+
+	2) Computational: Most learning algorithms use methods for finding the extremum of a speific objective functions. 
+Neural networks use gradient descent (GD) methods to minimize prediction errors.
+Decisision trees use greedy algorithms that minimize data entropy. 
+These optimization algorithms can become stuck at a local extremum point, which is a problem because their goal is to find a global optimum. 
+The ensembles of models combining the results of the prediction of simple classifiers, trained on different subsets of the source data, have a higher chance of finding a global optimum since they start a search for the optimum from different points in the initial set of hypotheses.
+
+	3) Representative: A combined hypothesis may not be in the set of possible hypotheses for simple classifiers. 
+Therefore, by building a combined hypothesis, we expand the set of possible hypotheses. 
+
+At this time, the most common approaches to ensemble construction are as followed: 
+
+	1) Bagging: This is an ensemble of models studying in parallel on different random samples from the same training set. 
+The final result is determined by the voting of the algorithms of the ensemble. 
+In classification, the class that is predicted by the most classifiers is chosen. 
+
+	2) Boosting: This is an ensemble of models trained sequentially, with each successive algorithm being trained on samples in which the previous algorithms made a mistake. 
+
+	3) Stacking: this is an approach whereby a training set is divided into N blocks, and a set of simple models is trained on N-1 of them. 
+An N-th nodel is then trained on the remaining block, but the outputs of the underlying algorithms are used as the target variable. 
+
+	4) Random forest: This is a set of decision trees buit independently, and whose answers are averaged decided by a majority vote. 

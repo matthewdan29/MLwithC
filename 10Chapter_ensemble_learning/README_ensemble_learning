@@ -1,0 +1,8 @@
+Anyone who works with data analysis and machine learning will come to understand that no method is ideal or universal. 
+This is why there are so many methods.
+Researchers have been searching for years for a compromise between the accuracy, simplicity, and interpretablity of various models. 
+Moreover, how can we increase the accuracy of the model, perferably without changing its essence?
+One way to improve the accuracy of models is to create and train model ensembles -- that is, set of models used to solve the same problem. 
+The ensemble traingin methodlogy is the training of a final set of simple classifiers, with the subsequent merging of the results of their predicitons into a single forcast of the aggregated algorithm. 
+
+

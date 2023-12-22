@@ -1,0 +1,6 @@
+The main idea of boosting is that the elementary algorithms are not built independently. 
+We build every sequential algorithm so that it corrects the mistakes of the previous ones and therefore improves the quality of the whold ensemble. 
+THe first successful version of  boosting was AdaBosst (Adaptive Boosting). 
+It is now rarely used since gradient boosting has supplanted it. 
+Gradient boosting is a method of GD with the loss function and its gradient replacement. 
+
