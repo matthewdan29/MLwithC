@@ -1,0 +1,1 @@
+/usr/bin/c++ -std=c++17 -msse3 -fopenmp -Wall -Wextra -rdynamic "CMakeFiles/linreg-shark.dir/linreg_shark.cpp.o" -o linreg-shark   -L/Shark/build/Shark/lib  -L/Shark/build/Shark/lib64  -Wl,-rpath,/Shark/build/Shark/lib:/Shark/build/Shark/lib64 -lshark -lcblas /usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.74.0 
