@@ -1,0 +1,1 @@
+/usr/bin/c++ -std=c++17 -msse3 -fopenmp -Wall -Wextra  -rdynamic CMakeFiles/json_sample.dir/json.cpp.o CMakeFiles/json_sample.dir/reviewsreader.cpp.o -o json_sample  -lstdc++fs -lstdc++ 
