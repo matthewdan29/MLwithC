@@ -1,0 +1,4 @@
+Mini batches are often used as a compromise. 
+the weights are adjusted after processing several training samples. 
+This is done less often than with stochastic descent, but more often than with batch mode. 
+

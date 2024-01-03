@@ -1,0 +1,13 @@
+The idea of the algorithm is based on the use of the output error of a neural network. 
+At each iteration of the algorithm, there are two network passes forward nd backward. 
+On a forward pass, an input vector is propagated from the network inputs to its outputs and forms a specific output vector correcsponding to the current propagates from the network output to its inputs, and the neuron weights are corrected. 
+In practice, training is continued not until the network is precisely tuned to the minimum of the error function, but until a sufficiently accurate approximation is achieved. 
+This process allows us to reduce the number of learning iterations and prevent the network from overfitting.
+
+		Backpropagation method modes
+
+	1) Stochastic 
+
+	2) Batch 
+
+	3) Mini-batch 

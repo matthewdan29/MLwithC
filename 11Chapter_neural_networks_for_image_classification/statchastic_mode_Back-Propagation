@@ -1,0 +1,5 @@
+The method introduces corrections to the weight coefficients immediately after calculating the network output on one training sample. 
+
+The stochastic method is slower than the batch method. 
+Given it does not carry out an accurate gradient descent, instead introducing some noise using an undeveloped gradient, it can get out of local minima (you going to want global minima the tricky part is find the right steps so you dont land at a local minima thinking its the global minima of a function then your overfitting its going to be correct in little more then over half cases but thats not good your aim is to fit the curve correctly)and procduce better results.
+it is also easier to apply when working with large amounts of training data. 

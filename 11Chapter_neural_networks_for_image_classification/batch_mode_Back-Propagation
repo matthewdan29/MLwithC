@@ -1,0 +1,4 @@
+For the batch mode of gradient descent, the loss function is calculated immedialtely for all available training samples, and then corrections of the weights coefficients of the neuron are introdcued by the error backpropagation method. 
+
+The batch method is faster and more stable than stochastic mode, but it tends to stop and get stuck at local minima. 
+Also, when it needs to train large amounts of data, it requires substantial computational resources. 
