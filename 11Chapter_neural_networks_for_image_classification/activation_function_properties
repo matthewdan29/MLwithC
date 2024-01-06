@@ -1,0 +1,18 @@
+The following is a list of activation function properties that are worth considering when deciding which activation function to choose: 
+
+	1) Non-Linearity: 
+If the activation function is non-linear, it can be proved that even a two level neural network can be a universal approximator of the function. 
+
+	2) Continuous differentiability: 
+This property is deseirable for providing gradient descent optimization methods. 
+
+	3) Value range: 
+If the set of values for the activation function is limited, gradient-based learning methods are more stable and les prone to calculation errors since there are no large values. 
+If the range of values is infinite, training is usually more effective, but care must be taken to avoid exploding the gradient. 
+
+	4) Monotonicty: 
+If the activation function is monotonic, the error surface associated with the single level model is guaranteed to be convex. 
+This allows us to learn more effectively. 
+
+	5) Sooth functions with monotone derivatives: 
+It is shown that in some cases, they provide a high degree of generality. 

@@ -1,0 +1,15 @@
+What your about to read doesnt give the full example of the backpropagation method but its a good filler to focus on the concepts. 
+
+	These are the main steps of the error backpropagation algorithm: 
+
+	1) Initialize all weights, "w^(I)(sub(i,j))", with small random values
+
+	2) Repeat this several times, spquentially, for all the training samples, or a mini-batch of samples: 
+		
+		A) Pass a training sample to the network input and calculate and rmember all the outputs of the neurons. Those calculated all the sums and values of our activation functions. 
+
+		B) Calculate the errors for all the neurons of the outpus layer: 
+
+	3) For each neuron on 'I' layers, starting from the penultimate one, calculate the error
+
+	4) Update the network weights 

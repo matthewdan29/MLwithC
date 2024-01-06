@@ -1,0 +1,8 @@
+What does an artificial neuron do? 
+It calculates the weighted sum of inputs, adds the bias, and decides whether to exclude this value or us it further. 
+The artificial neuron doesn't know of a threshold that can be used to figure out whether the output value switches neurons to the activated state. 
+For this purpose, we add an activation function. 
+It checks the value that's produced by the neuron for whether external connections should recognize that this neuron as activated or wheter it cna be ignored. 
+it determines the output value of a neuron, depending on the result of a weighted sum of inputs and a threshold value. 
+
+

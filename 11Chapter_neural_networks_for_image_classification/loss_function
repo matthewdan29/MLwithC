@@ -1,0 +1,37 @@
+With the loss function, neural network training is reduced to the process of optimally selecting the coefficients of the matrix of weights in order to minimize the error. 
+This function should correspond to the task, for example, categorical cross-entropy for the classification problem or the square of the difference for regression. 
+
+	Some of the popular loss functions that are used in neural networks: 
+
+	1) The Mean Squared Error (MSE) loss functions: is widely used for regression can Classification tasks. 
+Classification can predict continuous scores, which care intermediate results that are only converted into class labels as the very last step of the classification process. 
+MSE can be calculated using these continuous scores rather than the class labels. 
+The advantage of this is that we avoid lossing information due to dichotomization. 
+
+	2) The Mean Squared Logarithmic Error (MSLE) loss function: By taking the log of the predictions and target values, the variance that we are measuring has changed. 
+It is often used when we do not want to penalize considerable differences in the predicted and target values when both the predicted and actual values are big numbers. 
+Also MSLE penalizes underestimates mor than overestimates. 
+
+	3) The L2 Loss Function is the square of the L2 norm of the difference between the actual value and target value. 
+
+	4) The Mean Absolute Error (MAE) Loss Function is used to mease how close forecasts or predictions are to the eventual outcomes: MAE requires complicated tools such as linear programming to compute the gradient. 
+MAE is more robust to outliers that MSE since it does not make use of the square. 
+
+	5) The L1 Loss function is the sum of absolute errors of the difference between the acutual value and target value. 
+Similar to the relationship between MSE and L2, L1 is mathematically similar to MAE except it does not have division by 'n'. 
+
+
+	6) The Cross-Entropy Loss Function(https://cs.nyu.edu/~mohi/pub/comp.pdf(This is a great resource I own nothing to do with this link)) is commonly used for binary classificatioin tasks where labels are assumed to take values of 0 or 1: Cross-entropymeasures the divergence between two probability distributions. 
+If the cross-entropy is large, this means that the difference between the two distributions is significant, while if the cross-entropy is small, this means that the two distributions are similar to each other. 
+The cross-entropy loss function has the advantage of faster convergence, and it is more likely to reach global optimization than the quadratic loss function. 
+
+	7) The negative log-liklihood loss function is used in neural networks for classification tasks. 
+It is used when the model outputs a probability for each class rather than the class label. 
+
+	8) The Cosine Proximity Loss Function computes the cosine proximity between the predicted value and the target value: This function is the same as the cosine similarity, which is a measure of similarity between two non-zero vectors. 
+This is expressed as the cosine of the angle between them. 
+Unit vectors are maximally similar if they are parallel and maximally dissimilar if they are orthogonal. 
+
+	9) The Hinge Loss function (https://people.csail.mit.edu/dsontag/courses/ml14/slides/lecture2.pdf  (I own nothing in this link up its a great resource)) is used for training classifiers. 
+The hinge loss is also known as the max-margin objective and is used for maximum-margin classification. 
+It uses the raw output of the classifier's decision function, not the predicted class label. 

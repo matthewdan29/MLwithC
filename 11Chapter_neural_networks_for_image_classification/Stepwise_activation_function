@@ -1,0 +1,21 @@
+The stepwise activation functioin works like this -- if the sum value is higher than a particular threshold value, we consider the neuron activated. 
+Otherwise, we say that the neuron is inactive. 
+The function returns 1 when the argument is > 0, and the function returns 0 otherwise. 
+This approach is easy, but it has flaws. 
+Imagine that we are creating a binary classifier a model that should say yes or no. 
+A stepwise functioin can do this for us it prints 1 or 0. 
+Now, imagine the case when more neurons are required to classify many classes: calss1, class2, class3, or even more. 
+What happens if more than one neuron is activated?
+All the neurons from the activation function derive 1. 
+
+In this case, questions arise about what class should ultimately be obtained for a given object. 
+We only want one neuron to be activated, and the activation functions of other neurons should be zero.
+Such a network is more challenging to train and achieve convergence(https://imai.fas.harvard.edu/teaching/files/Convergence.pdf (I do not own anything with this link but its a great resource)).
+If the activation function is not binary, then the possible values are activated at 50%, activated at 20% and so on. 
+If several neurons are activated, we can find the neuron with the highest value of the activation function.
+Since there are intermediate values at the output of the neuron, the learning process runs smother and faster. 
+In the stepwise activation function, the likelihood of several fully activated neurons appearing during training decreases. 
+Also, the stepwise activation function is not differentiable at point 0 and its derivative is equal to 0 at all other points .
+This leads to difficulties when we are using gradient descent methods for training. 
+
+

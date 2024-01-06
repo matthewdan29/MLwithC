@@ -1,0 +1,8 @@
+Overfitting is one of the problems of machine learning models and neural networks in particular. 
+The problem is that the model only explains the samples from the training set, thus adapting to the training samples instead of learning to classify samples that were not involved in the training process. 
+Usually, the primary cause of overfitting is the models compleity. 
+The complexity can be too high for the training set available and, ultimately, for the problem to be solved. 
+The task of the regularizer is to reduce the models complexity, preserving the number of paramters. 
+consider the most common regularization methods that are used in neural networks.
+
+

@@ -1,0 +1,30 @@
+(NOTE: this activation function along with RLU and the left version stood out as must understand when I first learned this with python. Next, 2 links that will help you out I OWN NOTHING TO DO WITH THE INFORMATION. that help understanding the concepts better. First is from MIT the Second is from Cal Barkely. 
+
+	1)https://openlearninglibrary.mit.edu/assets/courseware/v1/9c36c444e5df10eef7c4d052e4a2ed1/asset-v1:MITx+6.036+1T2019+type@asset+block/notes_chapter_Neural_Networks.pdf
+
+	2) https://inst.eecs.berkeley.edu/~cs188/sp20/assets/lec31_nn.pdf )
+
+The sigmoid activation function, y = 1 / (1 + e^(-1)), is a smoth function. 
+A sigmoid is a non-linear function, and a combinatioin of sigmoids also produces a non-linear function. 
+THis allows us to combine neuron layers. 
+A sigmoid activation function is not binary, which makes an activation with a set of values from the range [0,1], in contrast to a stepwise function. 
+A smooth gradient also characterizes a sigmoid. 
+In the range of values of 'x' form -2 to 2, the values, 'y', change very quickly. 
+This gradient property means that any small change in the value of 'x' in this area entails a significant change in the value of 'y'. 
+This behavior of the function indicates that 'y' tends to cling to one of the edges of the curve. 
+
+The sigmoid looks like a suitbale function for classification tasks. 
+It tries to bring the values to one of the sides of the curve. 
+This behavior allows us to find clear boundaries in the prediction. 
+Another advantage of a sigmoid over a linear function is as follows: 
+
+		1) we have a fixed range of functions values [0, 1]
+		2) while a linear function varies with (-infintly, +infintly). 
+
+This is advantageous because it does not lead to errors in numerical calculations when dealing with large values on the activation function. 
+
+Today, the sigmoid is one of the most widespread activation functions in neural networks. 
+But it also has flaws that we have to take into account. 
+When the sigmoid function approaches its maximum or minimum, the output value of 'y' tends to weakly reflect changes in 'x'. 
+This means that the gradient in such areas take small values, and the small values cause the gradient to vanish. 
+THis vanishing gradient problem is a situation where a gradient value becomes too small or disappears and the neural network refuses to learn further or learns very slowly. 

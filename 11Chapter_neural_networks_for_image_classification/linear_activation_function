@@ -1,0 +1,12 @@
+The linear activation function, y = mx + b, is a straight line and is proportional to the input .
+Such a choise of activation function allows us to get a range of values, not just a binary answer. 
+We can connect several neurons and if more than one neuron is activated, the decision is made based on the choice of the maximum value. 
+The derivative of y = mx + b with respect to x is b(this is phrase wrong just remember d/dx x = unkown, m = the multiplicity property, and b = constent). 
+This conclusion means that the gradient has nothing to do with the argument of the function. 
+The gradient is a constant vector, while the descent is made according to a constant gradient. 
+If an erroneous prediction is made, then the backpropagation error's update changes are also constant and do not depend on the change that's made regarding the input. 
+
+There is another problem: related to layers. 
+A linear function activates each layer. 
+The value from this function goes to the next layer as input while the second layer considers the weighted sum at its inputs and, in turn, includes neurons, depending on another linear activation function. 
+Doesn't matter how many layers you have its all linear.  
