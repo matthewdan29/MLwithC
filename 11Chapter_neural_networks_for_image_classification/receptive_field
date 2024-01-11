@@ -1,0 +1,4 @@
+An essential component of the convolutional neural network architecture is a reduction in the amount of data from the input to the output of the model while still increasing the channel depth. 
+As mentioned earlier, this is usually done by chooding a convolution step (stride) or pooling layers. 
+The receptive field determines how much of the original input from the source is processed at the output. 
+The expansion of the receptive feild allows convolutional layers to combine low-level features (lines, edges) to create higher-level features(curves, textures). 

@@ -1,0 +1,6 @@
+The HE initialization method is a variation of the Xavier method thats more suitable for ReLU activation functions because it compensates for the fact that this function returns zero for half of the definition domain. 
+This method of weight calculation relies on a probability distribution with the following variance: 
+Var(W) = 2 / (N(in))
+There are also other methods of weights initialization. 
+Which one you choose is usually determinded by the problem being solved, the network topology, the activation functions being used, and the loss function. 
+

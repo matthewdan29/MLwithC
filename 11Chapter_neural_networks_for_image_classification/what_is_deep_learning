@@ -1,0 +1,24 @@
+Most often, the term deep learning is used to describe artificial neural netowrks that were designed to work with large amounts of data and use complex algorithms to train the model. 
+Algorithms for deep learning can use both supervised and unsupervised algorithms (reinforcement learning).
+The learning processis deep because, over time, the neural network covers an increasing number of levels. 
+The deeper the network is(that is, it has more hidden layers, filters, and levels of feature abstration it has), they higher the network's performance. 
+On large datasets, deep learning shows better accuracy than traditional machine learning algorithms. 
+
+The real breakthrough that led to the current resurgence of intrest in deep neural networks occurred in 2012, after the publication of the article ImagNet classification with deep convolutional neural networks, by Alex Krizhevshy, LLya Sutskever, and Geoff Hinton in the Communications of the ACM magazine. 
+The authors have put together many differnet learning acceleration techniques. 
+These techneques include convolutional neural networks, the intelligent use of GPUs, and some innovative math tricks: optimized linear neural (ReLU) and dropout, showing that in a few weeks they could train a complex neural network to a level that would surpas the result of traditional approaches used in computer vision. 
+
+Now, systems based on deep learning are applied in various fields and have successfully replaced the traditional approaches to machine learning. 
+Some examples of areas where deep learning is used are as follows: 
+
+	1) Speech Recognition: All major commercial speech recognition systems (such as Microsoft Cortana, Xbox, Skype Translator, Amazon Alexa, Google Now, Apple Siri, Baidu, and iFlytek) are based on deep learning. 
+
+	2) Compter Vision: Today, deep learning image recognition systems are already able to give mor accurate results than the human eye, for example, when analyzing medical research images (MRI, X-ray, and so on). 
+
+	3) Discovery of new drugs: For example, the AtomNet neural netowrk was used to predict new biomolecules and was put forward for the treatment of diseases such as the Ebola virus and multiple sclerosis. 
+
+	4) Recommender systems: Today, deep learning is used to study user preferences. 
+
+	5) Bioinformatics: It is also used to study the prediction of genetic ontologies. 
+
+

@@ -1,0 +1,6 @@
+The principle of choosing the initial values of weights for the layers that make up the model is very important. 
+Setting all the weights to 0 is a severe obstical to learning because none of the weights can be active initially. 
+Assigning weights to the random values from the interval, [0,1], is also usually not the best option. 
+Actually, model performance and learning process convergence can strongly rely on correct weights initialization; however, the initial task and model complexity can also play an important role. 
+Even if the tasks solution does not assume a strong dependecy on the values of the initial weights, a well-chosen method of initializing weights can significantly affect the model's ability to learn. 
+This is becuase it prests the model parameters while taking the loss function into account. 

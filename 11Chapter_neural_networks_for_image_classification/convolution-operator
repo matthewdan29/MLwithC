@@ -1,0 +1,45 @@
+(https://www.cs.cornell.edu/courses/cs1114/2013sp/sections/S06_convolution.pdf )
+
+
+This approach was first used for neural networks that worked with images, but it has been successfully used to solve problems from other subjects areas. 
+Consider using this method for image classification. 
+
+Assume that image pixels that are close to each other interact more closely when forming a feature of intrest for us then pixels located at a considerable distance. 
+Also, if a small trait is considered very important in the process of image classification, it does not matter in which part of the image this trait is found. 
+
+
+Lets's have a look at the concpet of a convolution operator. 
+We have a two-dimensional image of 'I' and a small 'K' matrix that has a dimension of 'h' * 'w' (the so-called convolution kernel) constructed in such a way that it graphically encodes a feature. 
+We compute a minimized image of 'I' * 'K', superimposing the core to the image in all possible ways and recording the sum of the elements of the original image and the kernel. 
+
+An exact definition assumes that the kernel matrix is transposed, but for machine learning tasks, it doesn't matter whether this operation was performed or not. 
+The conveolution operator is the basis of the convolutional layer in a CNN. 
+The layer consists of a certain number of kernels, K-> (with additive displacement compontents, b->, for each kernel), and calculates the convolution of the output image of the previous layer using each of the kernels, each time adding a displacement component. 
+In the end, the activation function, anc be applied to the entire output image. 
+Usually, the input stream for a convolutional layer consists of 'd' channels; for example, red/green,blue for the input layer, in which case the kernels are also expanded so that they also consist of 'd' channels. 
+The following formula is obtained for one channel of the output image of the convolutional layer, where K is the kernel and 'b' is the stride (shift) component. 
+
+Please note that since all we are doing here is adding and scaling the input pixels, the kernels can be obtained from the existing training sample using the gradient descent method, similar to calculating weights in an MLP. 
+An MLP could perfectly cope with the functions of the convolutional layer, but it requires a much longer training time, as well as a more significant amount of training data. 
+
+Notice that the convolution operator is not limited to two dimensional data: most deep learning framworks provide layers for one-dimensional or N-dimensional convolutions directly out of the box. 
+It is also worth noting that although the convolutional layer reduces the number of parameters compared to a fully connected layer, it uses more hyperparameters parameters that are selected before training. 
+
+In particular, the following hyperparameters are selected: 
+
+	1) Depth: How many kernels and bias coefficients will be involved in one layer. 
+
+	2) The height and width of each kernel. 
+
+	3) Step (stride): How much the kernel is shifted at each step when calculating the next pixel of the resulting image. 
+Usually, the step value that's taken is equal to 1, and the larger the value is, the smaller the size of the output image that's produced. 
+
+	4) Padding: Note that convoluting any kernel of a dimension greater than 1 x 1 reduces the size of the output image. 
+Since it is generally desirable to keep the size of the original image, the pattern is supplemented with zeros along the edges. 
+
+One pass of the convolutional layer affects the image by reducing the length and width of a particular channel but increasing its value (depth). 
+
+Another way to reduce the image dimension and save its general properties is to downsample the image. 
+Network layers that perform such operations are called pooling layers. 
+
+

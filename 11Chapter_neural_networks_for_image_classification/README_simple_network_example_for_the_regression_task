@@ -1,0 +1,6 @@
+Let's learn how to use the "Shogun", "Dlib", and "Shark-ML" libraries to create a simple MLP for a regression task. 
+The task is the same for all series samples MLP shoud learn cosine function at limited intervals. 
+In this books code samples, we can find the full program for the data generation and MLP training. 
+Here, we'll discuss the essintial parts of the program (I know this repo looks bad right now and I'm going to fix it after I complete everything so you can read and experament with the algo's) that are used for the nueral networks API view. 
+Note that the activation functions we'll be using for these samples are the Tanh and ReLU functions. 
+We've chosen them in order to achieve better convergence for this particular task. 

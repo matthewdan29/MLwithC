@@ -1,0 +1,10 @@
+(https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks (I do not own anything here but this is a great resource please look its from Standford U. If they requrest for me to take it down i will so please look at this link its worth your time.))
+
+The network is developed from a small number of of low-level filters in the initial stages to a vast number of filters, each of which finds a specific high-level attribute. 
+The transition from level to level provides a hierarchy of pattern recognition. 
+
+One of the first convolutional network architectures that was successfully applied to the pattern recognition task was the LeNet-5, which was developed by Yann LeCun, Leon Bottou, Yoshuha Bengio, and Patrick Haffner. 
+It was used to recognize handwritten and printed numbers in the 1990s. 
+We can see that the depth was increasing and that the size become smaller. 
+This means that toward the final layer, the number of features the network can learn increased, but their size became smaller. 
+Such behavior is very common among different convolutional network architectures. 

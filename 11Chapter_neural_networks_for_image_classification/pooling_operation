@@ -1,0 +1,8 @@
+A pooling layer receives small, separate fragments of the image and combines each fragment into one value. 
+There are several possible methods of aggregation. 
+The most straightforward one is to take the maximum from a set of pixels. 
+Let's consider how maximum pooling works. 
+We have a matix of numbers that's 6 x 6 in size. 
+The pooling window's size equals 3, so we can divide this matrix into the four smaller subatrices of size 3 x 3. 
+Then, we can choose the maximum number from each submatrix and make a smaller matrix of size 2 x 2 from these numbers. 
+The most important characteristic of convolutional or pooling layer is its receptive field value, which allows us to understand how much information is used for processing. 

@@ -1,0 +1,3 @@
+The Xavier initialization method is used to simplify the signal flow through the layer during both the forward pass and the backward pass of the error for the linear activation function. 
+This method also works well for the sigmoid function, since the region where it is unsaturated also has a linear character. 
+When calculating weights, this method relies on probability distribution with a variance of Var(W) = 2/(N(in) + N(out)), where N(in) and N(out) are the number of neurons in the previous and subsequent layers, respcectively. 

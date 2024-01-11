@@ -1,0 +1,2 @@
+Next, is the outline of a simple MLP for a regression task with the "Shogun", "Dlib", and "Shark-ML" libraries. 
+We'll also use the PyTorch C++ API to create a more advance network -- a convolutional deep neural network with the LeNet5 architecture, which we discussed in the Convolution Network Architecture file. 

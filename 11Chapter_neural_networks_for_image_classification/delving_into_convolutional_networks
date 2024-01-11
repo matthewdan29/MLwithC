@@ -1,0 +1,8 @@
+The MLP is the most powerful feedforward neural network. 
+It consists of several layers, where each neuron receives its copy of all the output from the previous layer of neurons. 
+This model is ideal for certain types of tasks, for example, training on a limited number of more or less unstructured parameters. 
+One popular solution is to lower the resolution of the images so that MLP becomes applicable. 
+Nevertheless, when we lower the resolution, we risk losing a large amount of information. 
+It would be great if it were possible to process the information before applying a decrease in quality so that we don't cause an explosive increase in the number of model parameters. 
+There is a very effective way to solve this problem, which is based on the convolution operation. 
+

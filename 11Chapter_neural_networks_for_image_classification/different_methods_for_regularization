@@ -1,0 +1,29 @@
+The most widespread regularization methods are L2-regularization, dropout, and batch normalization. 
+
+	1) L2-Regularization (weight decay)(https://ai.standford.edu/~ang/papers/icml04-l1l2.pdf (this paper was by "Andrew Ng" this is a GREAT RESOUCRE)): is performed by penalizing the weights with the highest values. 
+Penalizing is performed by minimizing their L2-norm using the lambda parameter - a regularization coefficient that expresses the preference for minimizing the norm when we need to minimize losses on the training set. 
+This is, for each weight, 'w', we add the term, (lambda)/2||w||^2 = (lambda)-2 (summation) 'W' i = 1 w^2(sub(i)), to loss function, L(y^, y). 
+We must select lambda correctly. 
+If the coefficient is too small, then the effect of regularization is negligible. 
+If it is too large, the model can reset all the weights. 
+
+	2) Dropout Regularization: consists of changing the structure of the network. 
+Each neuron can be excluded from a network structure with some probability, 'P'. 
+The exclusion of a neuron means that with any input data or parameters, it returns 0. 
+Excluded neurons do not contribute to the learning process at any stage of the backpropagation algorithm. 
+Therefore, the exclusioin of at least one of the neurons is equal to learning to new neural network. 
+This "thinking" network is used to train the remaining weights. 
+A gradient step is taken, after whcih all ejected neurons are returned to the newural network. 
+Thus, at each step of training, we set up one of the possible 2N network architiecttures. 
+By architecture, we mean the structure of connections between neurons, and by N,m we're denoting the total number of neurons. 
+WHen we are evaluation a neural network, neurons are no longer thrown out. 
+Each neuron output is multiplied by (1-p). 
+This means that in the neuron's output, we receive its response expectation for all 2N architectures. 
+Thus, a neural network trained using dropout regularization can be considered a result of averaging responses from an ensemble of 2N networks. 
+
+	3) Batch Normalization(https://dspace.mit.edu/bitstream/handle/1721.1/137779/7515-how-does-batch-normalization-help-optimization.pdf (This paper is from MIT I do not own any information from this link)): makes sure that the effective learning process of neural networks isn't impeded. 
+It is possible that the input signal to be significantly distorted by the mean and variance as the singal propagates through the inner layers of a network, even if we initially normalized the signal at the network input. 
+This phenomenon is called the internal covariance shift and is fraught with severe discrepancies between the gradients at different levels or layers. 
+Therefore, we have to use stronger regularizers, which slows down the pace of learning. 
+
+

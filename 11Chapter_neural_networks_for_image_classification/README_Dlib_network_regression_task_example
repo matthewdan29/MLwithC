@@ -1,0 +1,31 @@
+The "Dlib" library has an API for working with neural networks.
+It can also be built with Nvidia CUDA support for performance optimization. 
+Using the CUDA or the OpenCL techneologyies for GPUs is important if we are plannig to work with a large amount of data and deep neural networks. 
+
+The approach used in the "Dlib" library for neural networks is the same as for other machine learning algorithms in this library. 
+We should instantiate and configure an object of the required algorithm class and then use a particular trainer to train it on a dataset. 
+
+There is a "dnn_trainer" class for training neural networks in the "Dlib" library. 
+Objects of this class should be initialized with an object of the concrete network and the objct of the optimization algorithm. 
+The most popular optimization algorithm is the stochastic gradient descent algorithm with momentum, which we discussed in the Backpropagation method modes file.
+This algorithm is implemented in the "sgd" class. 
+Objects of the "sgd" "dnn_traner" class has the following essential configuration methods: 
+	1) set_learning_rate
+
+	2) set_mini_batch_size
+
+	3) set_max_num_epochs
+
+These set the learning rate parameter value, the minibatch size, and the maximum number of training epochs, respectively. 
+Also, this trainer class supports dynamic learning rate change so that we can, for example make a lower learning rate for later epochs.
+The learning rate shrink parameter can be configured with the "set_learning_rate_shrink_factor" method. 
+But for the following example, we'll use the constant learning rate because, for this particular data, it gives better training results. 
+The next essential item for instantating the trainer object is the neural network type object. 
+The "Dlib" library uses a declarative style to define the network architecture, and for this purpose, it uses C++ templates. 
+So, to define the neural network architecture, we should start with the network's input. 
+In our case, this is of the "matrix<double>" type. 
+We need to pass this as the template argument to the next layer type; in our case, this is the fully-connected layer of the "fc" type. 
+The fully connected layer type also takes the number of neurons as the template argument. 
+To define the whole network, we should create the nested type definitions, until we reach the last layer and the loss function. 
+In our case, this is the "loss_mean_squared" type, which implements the mean squared loss function, which is ususally used for regression tasks.
+

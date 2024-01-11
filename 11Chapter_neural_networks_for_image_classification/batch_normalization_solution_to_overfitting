@@ -1,0 +1,14 @@
+Batch normalization offers a straightforward solution to this problem: 
+
+Normilze the input data in such a way as to obtain zero mean and unit variance.
+Normalization is performed before entering each layer. 
+During the training process, we normalized the batch samples, and during use, we normalize the statistcs obatined based on the entire training set since we cannot see the test data in advance. 
+Using these statistical characterisitcs, we transform the activation function in such a way that it has zero mean and unit variance throught the whole batch. 
+To get the final activation function, 'y', we need to make sure that, during normalization, we don't lose the ability to generalize. 
+Since we applied scaling and shifting operations to the original data, we can allow arbitrary scaling and shifting of normalized values, thereby obtaining the final activation function. 
+This generalization also means that batch normalization can be useful when applying thin input of a neural network directly. 
+
+This means, when applied to multilayer networks, almost always successfully reaches its goal it accelerates learning. 
+Moreover, its an excellent regularizer, allowing us to choose the learning rate, the power of the L2 regularizer, and the dropout. 
+The regularization here is a consequence of the fact that the result of the network for a specific sample is no longer deterministic which simplifies the generalization process. 
+
