@@ -1,0 +1,20 @@
+Currently, the recurrent neural network (RNN) is one of the most well-known and practical approaches used to construct deep neural networks.  
+They are designed to process time-series data. 
+Typically, data of this nature is found in the following task: 
+
+	1) Natural language text processing, such as text analysis and automatic translation. 
+
+	2) Automatic speech reocgnition 
+
+	3) Video proccessing, for predicting the next frame based on previous frames, and for recongnizing emotions 
+
+
+	4) image processing, for generating image descriptions 
+
+	5) Time series analysis, for predicting flutuations in exchange rates or company stock prices. 
+
+In recurrent networks, communications between elements form a directed sequence.
+Thanks to this, it becomes possible to process a time series of events or sequential spatial chains. 
+Unlike multilayer perceptrons, recurrent networks can use their interneal memory to process sequences of arbitray lengths. 
+Many different architeural solutions for recurrent networks (from simple to complex) have been proposed. 
+Currently, the most widespread recurrent network architectures are long short-term memory (LSTM) and gated recurrent unit (GRU). 

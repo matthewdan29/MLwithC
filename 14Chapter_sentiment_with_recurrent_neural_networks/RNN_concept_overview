@@ -1,0 +1,40 @@
+(https://inst.eecs.berkeley.edu/~cs182/sp23/assests/notes_new/lect13.pdf (I own nothing to this link but trust me the information here is worth reading 2 to 5 tmes over))
+
+The goal of an RNN is consistent data usage under the assumption that there is some dependency between consecutive data elements. 
+In traditional neural networks, it is understood that all inputs and outputs are independent. 
+But for many tasks, this independence is not suitable. 
+If you want to predict the next word in a sentence, for example, knowning the sequence of words preceding it is the most reliable way to do so. 
+RNNs are recurrent because they perform the same task for each element of the sequence, and the output is dependent on previous calculations. 
+
+Basicly my guy, RNNs are networks that have feedback loops and memory. 
+RNNs use memory to take into account prior information and calculations results.
+The presence of feedback allows us to transfer information from one timestep of the network to another timestep. 
+A recurrent network can be considered several copies of the same network, each of which transfers information to a subsequent copy. 
+The hidden stat in each RNN module is a function of the input vector and the hidden state vector from the previous step. 
+These recurrent weight matrices are the same at every step. 
+This concept is a key component of an RNN. 
+If you think about this carefully, this approach is significantly different from, say, traditional two-layer neural networks. 
+One of the attractive ideas of RNNs is that they potentially know how to connect previous information with the task at hand. 
+For example, in the task of video flow analysis, knowledge of the previus frame of the video can help in understanding the current frame (knowing previous object positions canhelp us predict their new positions). 
+The ability of RNNs to use prior information is not absolute and usually depends on some circumstances. 
+
+Sometimes, to complete the current task, we need only recent information. 
+Consider, for example, a language model trying to predict the next workd based on the previous words. 
+If we want to predict the last word in the phrase clouds are floating in the sky, we don't need a broader context; in this case, the last word is almost certainly sky. 
+in this case, we could say that the distance between the relevant information and the subject of prediction is small, which means that RNNs can learn how to use infromation from the past. 
+
+But sometimes, we need more context. 
+Suppose we want to predict the last word in the phrase, I speack French. 
+Further back in the same text is the phrase, I grew up in France. 
+The conext, therefore, suggests that the last word should likely be the name of the coutry's language. 
+However, this may have been much further back in the text possibly on a different paragraph or page and as the gap between the crucial context and the point of its application grows, RNNs lose their ability to bind information accurately. 
+
+In theory, RNNs should not have problems with long-term processing dependencies.
+A person can carefully select network parameters to solve artificial problems of this type. 
+Unfortunately, in practice, training the RNN with these parameters seems impossible due to the vanishing gradient problem. 
+This problem was investigated in detail by Sepp Hochreiter (1991) and Yoshua Bengio et al. (1994). 
+They found that the lower the gradient that's used in the bacpropagation algorithms, the more difficult it is for the network to update its weights and the longer the training time will be. 
+There are different reasons why we can get low gradient values during the training process, but one of the main reasons is the network size. 
+For RNNs, it is the most crucial parameter because it depends on the size of the input sequence we use. 
+The longer the swuaence that we use is, the bigger the network we get is. 
+Fortunatley, there are mthods we can use to deal with this problem in RNNs. 
