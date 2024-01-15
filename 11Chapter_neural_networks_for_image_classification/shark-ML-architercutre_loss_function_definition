@@ -1,0 +1,16 @@
+(Https://people.csail.mit.edu/romer/paper/SchFunRos_ECML07.pdf  I do not own anything on this link but its a great resource to read)
+After we've defined the netwrok structure, we need to define the loss function for the optimization algorithm. 
+The "ErrorFunction" class is used for this purpose. 
+Its constructor take 4 parameters: 
+
+	1) An object representing the traing dataset 
+
+	2) a pointer to the object that represents the network's structure 
+
+	3) A pointer to the object that implements the loss function "SquraedLoss", in our case. 
+
+	4) A Boolean flag telling us to use mini-batches or not
+
+The "ErrorFunction" type object can be configured with a regularized.
+
+

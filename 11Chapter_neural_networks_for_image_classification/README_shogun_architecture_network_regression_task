@@ -1,0 +1,15 @@
+To create the neural network with "Shogun" library, we have to start by defining the architecture of the network. 
+We use the "CNeuralLayers" class in the "Shogn" library to do so, which is used for aggregating the network layers. 
+	It has different methods for creating layers: 
+
+	1) Input: Creates the input layer with a specified number of dimensions
+
+	2) Logistic: Creates a fully connected hidden layer with the logistic (sigmoid) activation function. 
+
+	3) Linear: Creates a fully connected hidden layer with the linear activation function. 
+
+	4) Leaky_Rectified_linear: Creates a fully connected hidden layer with the Leaky ReLu activation function
+
+	5) softmax: Creates a fully connected hidden layer with the softmax activation function. 
+
+

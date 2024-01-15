@@ -1,0 +1,12 @@
+The "shark-ml" library also has the functionality to define, train, and ecaluate neural networks. 
+This process can be divided into five parts: 
+	
+	1) architecture definition 
+
+	2) loss function definition, 
+
+	3) network initialization
+
+	4) optimizer configuration
+
+	5) training

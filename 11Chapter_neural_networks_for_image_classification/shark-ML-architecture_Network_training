@@ -1,0 +1,10 @@
+To begin training, we need to configure a dataset object first. 
+The mini-batch size can be automatically configured when we define the dataset object. 
+This happens when we create the "RegressionDataset" type object. 
+To perform one training step, we should use the "step" method of the optimizer object, but we should be aware that this method does only one pass of mini-batch training. 
+So, to perform several epochs using the whole dataset, we have to manually caluclate the number steps. 
+
+When training is done, we have to copy the trained parameters from the optimizer obect to the network object. 
+This can be done with the "setParameterVector" method of the network object. 
+We can use the "solution()" method to get parameters from the optimeizer. 
+

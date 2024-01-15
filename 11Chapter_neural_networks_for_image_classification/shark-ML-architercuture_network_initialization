@@ -1,0 +1,7 @@
+The network can be randomly initialized with the "initRandomNormal" function, which takes two parameters: 
+
+	1) The pointer to the network object 
+	
+	2) The variance of normal distribution used for initalization. 
+
+

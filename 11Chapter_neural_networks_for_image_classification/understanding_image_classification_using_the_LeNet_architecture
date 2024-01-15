@@ -1,0 +1,35 @@
+We'll implement a convolutional neuarl network for image classification. 
+We are going to use the famous dataset of handwritten digits called the Modified National Institue of Standards and Technology (MNIST), which can be found at http://yann.lecun.com/exdb/mnist/. 
+The dataset is a standard that was proposed by the US NIST to calibrate and compare impage recognition methods using machine learning, primarily based on neural networks. 
+The creators of the dataset used a set of samples from the US Census Bureau, with some samples written by students of American universities added later. 
+All the samples are normalized, anti aliased grayscale images of 28 x 28 pixels. 
+The MNIST database contains 60000 images for training and 10000 images for testing. 
+The four files: 
+
+	1) train-images-idx3-ubyte: Training set images
+
+	2) train-labels-idx1-ubyte: Training set labels
+
+	3) t10k-images-idx3-ubyte: Test set images
+
+	4) t10k-labels-id1x1-ubyte: Test set labels
+
+Pixels are stored in a row wise manner, which values in the range of [0, 255]. 
+0 means background (white), while 255 means foreground (black). 
+
+We are using the PyTorch deep learning framework. 
+This framework is primarily used with the Python language. 
+However, its core part is written in C++, and it has a well documented and actively developed C++ client API called LibPyTorch. 
+This framework is based on the linear algebra library called ATen, which heavily used the Nvidia CUDA technology for performacne improvement. 
+The Python and C++ APIs are pretty much the same but have different language notations, so we can use the offical Python documentation to learn how to use the framework. 
+This documentation also contains a section stating the differences between C++ and python API's an dspcific articles about the usage of the C++ API. 
+
+The PyTorch framework is widely used for research in deep learning. 
+As well discussed previously, the framework provides functionality for managing big datasets. 
+It can automatically parallelize loading the data from a disk, manage pre-loaded buffers for the data to reduce memory usage, and limit expensive performance disk operations. 
+It provides the "torch::data::Dataset" base class for the implementation of the user custom dataset. 
+We only need to override two methods here: 
+	1) get
+
+	2) size
+These methods are not virtual because we have to use the C++ template's polymorphism to inherit from this class 

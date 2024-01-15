@@ -1,0 +1,6 @@
+The next step is configuring an optimizer. 
+We can use a gradient descent optimizer for our task. 
+There is a class called "StepestDescent" in Shark-ML library for this purpose. 
+It can configured with the "setLearnRate" and "setMomentum" methos. 
+After its instantiation and configuration, the "init" method should be called with an object of the "ErrorFunction" type as its parameter. 
+
