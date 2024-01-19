@@ -1,0 +1,10 @@
+torch::stack - concatenates tensors from the given container along a new dimension. 
+
+GetIndex - Returns the index of a given word in the vocabulary
+
+GetPaddingIndex - Returns the index of padding values in the vocabulary
+
+GetEmbeddings - Returns all embeddings as one tensor object
+
+GetEmbeddingCount - Returns the number of embeddings in the vocabulary
+

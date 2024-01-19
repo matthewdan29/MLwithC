@@ -1,0 +1,7 @@
+Multilayer RNNs (also called deep RNNs) is another concept. 
+The idea here is that we add additional RNNs on top of the source network, where each added RNN is a different layer. 
+The output of the hidden state of the first (or lowest) RNN is the input for the RNN is the input for the RNN of the next layer above it. 
+The general prediction is usually calculated from the latent state of the most recent (highest current output) layer. 
+
+Note that each layer needs its own initial hidden state. 
+

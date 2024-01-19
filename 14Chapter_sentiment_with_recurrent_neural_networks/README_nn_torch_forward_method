@@ -1,0 +1,5 @@
+The "forward" method is also a copy of the same method from the "torch::nn::LSTM" module, but it used a different overload of the "torch::lstm" function. 
+We can see that the main logic in the "forward" method is to initialize the cell state if it is not defined and called the "torch::lstm" function. 
+Notice that all the methods in this class consider the "options.bidirectional_" flag in order to configure the dimensions of the weights and state tensors. 
+Also, notice that the module's state is a combined tensor from two tensors: the hidden state and the cell state. 
+

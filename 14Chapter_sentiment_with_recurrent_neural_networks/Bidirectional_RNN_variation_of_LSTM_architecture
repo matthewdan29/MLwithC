@@ -1,0 +1,14 @@
+Bidirectional RNNs, LSTMs, and GRUs (BiRNN, BiLSTM, and BiGRU) are not so different from their unidirectinal variants. 
+The difference is that these networks use not only data from the past, but aslo from the future of the series. 
+When we work with a sequence in a recurrent network, we usually feed one element followed by the next and pass on the previous state of the network as the input. 
+The natural direction of this process takes place from left to right. 
+
+In many cases, however, the sequence has already been given in its entirely from the very beginning. 
+Due to this, we can pass it to the neural network from both sides with two neural networks, and then combine their results. 
+
+This architecture is called a bidirectional RNN. 
+Its quality is even higher than ordinary recurrent networks because there is a broader context for each element of the sequence. 
+There are now two contexts - one comes before, while one comes after. 
+For many taskss, this adds quality, especially for tasks related to processing natural language. 
+
+

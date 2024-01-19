@@ -1,0 +1,6 @@
+When the RNN model has been initialized and configured, we can begin training. 
+The necessary part of the training process is an optimizer object. 
+In this example, we will use the Adam optimization algorthm. 
+The name Adam is derived from the adaptive moment estimation. 
+This algorithm usually results in a better and faster convergence in comparison with pure stochastic gradient descent. 
+

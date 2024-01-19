@@ -1,0 +1,50 @@
+Long Short-Term Memory (LSTM) is a special kind of RNN architecture that's capable of learning long-term dependencies. 
+It was introduced by Sepp Hochreiter and Jurgen Schmidhuber in 1997 and was then improved on and presented in the works of many other researchers. 
+It perfectly solves many of the various problems we've discussed, and are now widely used. 
+
+In LSTM, each cell has a memory cell and three gates (filters): 
+	1) Input gate
+
+	2) Output gate, 
+
+	3) forgetting gate. 
+
+The purpose of these gates is to protect information. 
+The input gate determines how much information from the previous layer should be stored in the cell. 
+The output gate determines how much information the following layers should receive. 
+The forget gate, no matter how strange it may seem, performs a useful function. 
+Example, if the network studies a book and moves to a new chapter, some words from the old chapter can be safely forgotten. 
+
+The critical component of LSTM is the cell state - a horizontal line running along the top of the circuit. 
+The state of the cell resembles a conveyor belt. 
+It goes directly through the whole chain, participating in only a few linear transformations. 
+Information can easily flow through it, without being modified. 
+
+However, LSTM can remove information from the state of a cell. 
+Structures called gates or filters govern this process. 
+Gates or filters let you skip information based on some conditions. 
+THey consist of a sigmoidal neural network layer and pointwise multipication operation.
+
+The sigmoidal layer returns numbers from zero to one, which indicates what proportion of each block of information should be skipped further along the network. 
+A zero value, in this case, means skip everything, whereas one means keep everyting. 
+
+There are three such gates in LSTM that allow you to save and control the state of a cell. 
+The first infromation flow stage in the LSTM determines what information can be discarded from the state of the cell. 
+THis decision is made by the sigmoidal layer, called the forget gate layer. 
+It looks at the state of the cell and returns a number from 0 to 1 for each value. 
+1 means keep everything, while 0 means skip everything. 
+
+The next flow stage is the LSTM decides what new information should be stored in the cell state. 
+This phase consists of two parts: 
+	1) A sigmoidal layer called the input layer gate determines which values should be updated. 
+
+	2) The "tanh" layer builds a vector of new candidate values, which can be added to the state of the cell. 
+
+To replace the old state of the cell with the new state, we need to multiply the old state of "C(sub(t - 1))" by f(sub(t)), forgetting what we decided to forget. 
+Then, we add i(sub(t)`C(sub(t))) 
+
+The output values are based on our cell state, and gate functions(filters) should be applied to them. 
+First, we apply a sigmoidal layer named the output gate, which decides what information from the state of the cell we should output. 
+Then, the state values of the cell pass through the tanh layer to get values from -1 to 1 as the output, which is multiplied by the output values of the sigmoid layer. 
+There are many variations of LSTM based on this idea. 
+

@@ -1,0 +1,8 @@
+Now, we can create classes for out RNN model. 
+We are going to base our model on the LSTM architecture. 
+There is a module called "torch::nn::LSTM" in PyTorch C++ API for this purpose.
+The problem is that this module can't work with packed sequences. 
+There is a standalone function called "torch::lstm" that can do this, so we need to create our custom module to combine the "torch::nn::LSTM" module and the "torch::lstm" function so that we can work with packed seuences. 
+Such an approach causes our RNN to only process the non-padded elements of our sequence. 
+
+

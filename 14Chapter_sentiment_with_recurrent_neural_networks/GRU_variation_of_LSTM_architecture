@@ -1,0 +1,15 @@
+The GRU is a variantion of the LSTM architecture. 
+They have one less gate (filter), and the connections are implemented differenctly. 
+In this variant, the forget gate and the input gate are combined into one update gate. 
+Besides this, the cell state and the latent state are combined. 
+The resulting model is simpler than standard LSTM maodels, and as a result, it is gaining more popularity. 
+
+The updated gate determines how much information should remain from the last state and how much should be taken from the previous layer. 
+
+The reset gate works like the forget gate. 
+
+The tanh layer builds a vector of new candidate values, that can be added to the state of the cell. 
+The values of the reset gate are applied to the values of the previous state. 
+
+A new state is obtained based on a combination of previous state values and new candidate values. 
+The update gate values control in what proportion state values should be used. 

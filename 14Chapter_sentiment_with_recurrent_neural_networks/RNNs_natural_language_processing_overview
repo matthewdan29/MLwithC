@@ -1,0 +1,34 @@
+Natural Language Processing (NLP) is a subfield of computer science that sudies algorithms for processing and analyzing human languages. 
+There are a variety of algorithms and approaches for teaching computers to solve a task that assumes using human language data. 
+Let's start with the basic principles used in this area. 
+After all, the computer does not know how to read, so the first issue with NLP is that you have to teach a machine to work with natural language words. 
+One idea that comes to mind is to encode words with numbers in the order they exist in the dictionary,. 
+This idea is fairly simple -- numbers are endless, and you can number and renumber words with ease. 
+But this idea has a significant drawback; the words in the dictionary are in alphabetical order, and when we add new words, we need to renumber a lot of words agian. 
+Such an approach is computationally inefficient, but even this is not an important issue. 
+The important thing is that the spelling of the word has nothing to do with its meaning. 
+The words rooster, hen, and chick have very little in common with each other alphabetically, and are far away from each other in the dictionary, even though they can determine the male, female, and young of the same bird. 
+
+Therefore, we can distinguish two types of proximity measures for words: 
+
+	1) Lexical
+
+	2) Semantic
+
+In other words, the lexicographic (dictionary) order doesn't preserve the semantic proximity of words. 
+For example, the word allium can be followed by the word allocate in a dictionary, but they don't have any common semantics. 
+Another example of lexically similar words is rain and pain, but they are also usually used in different contexts. 
+As shown in the chicken example, words that are very different lexically (rooster and hen) can have a lot of semantic similarity (they refer to birds), even if they are very distant from each in the dictionary. 
+So, these proximity measures are independant. 
+
+To be able to represent semantic proximity, we can use embedding; that is, assocationg a word with a cector and displaying its meaning in the space of meanings.
+Embedding is where we map an arbitrary entity to specific vector; for example, a node in a graph, an object in a picture, or the difinition ofa word. 
+
+There are many appraches to creating embedding for words. 
+Over the next few subsections, we'll consider the two most widespread : 
+
+	1) Word2Vec 
+
+	2) global vectors (GloVe)
+
+

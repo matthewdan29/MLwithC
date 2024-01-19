@@ -1,0 +1,7 @@
+The PyTorch data loader object is responsible for sampling random training objects and making batches from them. 
+The objects of our "ImdbDataset" class should be initialized with the "ImdbReader" and "Vocabulary" class instances. 
+We also added the "device" parameter of "torch::DeviceType" into the constructor to tell the object where to place the training object in CPU or CPU memory. 
+In the constructor, we store the pointers to input objects and the device type.
+We override two methods from the "torch::data::Dataset" class: the "get" and "size" methods. 
+
+

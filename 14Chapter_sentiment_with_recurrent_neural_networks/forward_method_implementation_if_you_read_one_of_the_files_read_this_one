@@ -1,0 +1,25 @@
+The implementation of the "forward" method take two tensors as input parameters.
+One is the text sequences, which are "[sequence length x batch size]" in size, while the other is text lengths, which are "[batchsize x 1]" in size. 
+First, we applied the "torch::embedding" function to our text sequences. 
+This function converts indexed sequences into ones with embedding values (this is just a table lookup operation). 
+It also takes "embedding_weights_" as a parameter. 
+"embeddiing_weights_" is the tensor that contains our pre-trained embeddings. 
+The "pad_idx_" parameter tells us what index points to the padding value embedding. 
+The result of calling this function is "[sequence length x batch size x 100]". 
+We also applied the dropout module to the embedded sequences to perform regularization. 
+
+Then, we converted the padded embedded sequences into packed ones with the "torch::_pack_padded_sequence" function. 
+This function takes the padded sequences with their lengths (which should be one-dimensional tensors) and returns a pair of new tensors with different sizes, which also represent packed sequences and packed lengths, correspondingly. 
+We used packed sequences to improve the performance of the model. 
+
+After, we passed the packed sequences and their lengths into the "PackedLSTM" module's forward function. 
+This module processed the input sequences with the RNN and returned an object of the "troch::nn::RNNOutput" type with two members: "output" and "state". 
+The "state" memberis in the following format: "{hidden_state, cell_state}". 
+
+We used the values of the hidden state as input for the fully connected layer. 
+To get the hidden state values, we extracted them from the combined state, which was don with the "narrow" method of a tensor object. 
+This method returns the narrowed version of the original tensor. 
+The first argument is the dimension index that narrowing should be performed along, while the next two arguments are the start position and the length. 
+The returned tensor and input tensor share the same underlying storage. 
+
+

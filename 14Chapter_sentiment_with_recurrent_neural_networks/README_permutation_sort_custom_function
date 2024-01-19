@@ -1,0 +1,5 @@
+To perform the sorting operation, we defined a lambda function that changes the order of the container's items by the given vector of indices.
+This was the "appy_permutation" lambda. 
+This function created a new intermediate vector of the same size as the one we want to reorder and filled it with the "std::transform" algorithm with a custom functor, which returns the item from the original container but with the index taken from the permutaion object. 
+
+When all the batch vectors have been sorted in the required order, we can use the "torch::stack" function to concatenate each of them into the single tensor with an additional dimenstion. 

@@ -1,0 +1,94 @@
+(This is a wonderful resource from University of Illinois I own nothing from this like ( https://courses.grainger.illinois.edu/cs447/fa2019/Slides/Lecture08.pdf))
+
+There is also another popular algorithm called GloVe aims to achieve two goals:
+
+	1) Create word vectors that capture meaning in the vector space 
+
+	2) Take advantage of global statistics, not just use local information
+
+Unlike Word2Vec, which is trained using a sentence's flow, GloVe is trained based on a co-occurrence matrix and train word vectors so that their difference predicts co-occurrence ratios. 
+
+First, we need to build a co-occurrence matrix. 
+It is possible to calculate the co-occurrence matrix using a fixed-sized windo to make GloVe also take into account the local context. 
+For example, the sentence "The cat sat on the mat", with a window size of 2, can be converted into the co-occurrence matrix. (its a 2 by 2 matrix with the labels let me know I'll screenshot it and add it. personally it helps with understanding)
+
+The matrix is symmetrical because when the word "cat" appears in the context of the "sat", the opposite happens too. 
+
+To connect the vectors with the statistics we calculated previously, we can formaulate the follwoig principle: 
+	1) the coincidental relationship between two words
+
+	2) In terms of context
+
+	3) closely related to their meaning. 
+
+
+For example, consider the words "ice" and "steam". 
+Ice and steam differ in their state but are similar in that they are forms of water. 
+Therefore, we can expect that water-related words (such as moisture and wet) will be displayed equally in the context ofthe words "ice" and "steam". 
+In contrast, words such as "cold" and "solid" are likely to appear next to the word "ice", but not the word "steam". 
+
+Let's denote the co-occurrence matrix as X. 
+In this case X(sub(i,j)) refers to the elements 'i' and 'j', in X, which is equal to the number of times the word 'j' appears in the context of the word 'i'. 
+We can also define X(sub(i)) = (summation) X(sub(i,l)) as the total number of words that appeared in the context of the word 'i'. 
+
+Next, we need to generate an expression to estimate co-occurrence ratios using word vectors. 
+To do this, we start with the frlationship: 
+
+F(w(sub(j)), w(sub(j)), ~w(sub(k))) about(=)  (p(sub(i,j)))/(p(sub(j,k)))
+
+Here, P(sub(i,j)) denotes the probability of the appearance of the word 'j' in the context of the word 'i', which can be expressed(i'm going to label it in this dir as "GloVe_embedding_NLP")
+
+'F' is an unknown function, which takes embeddings for the words i, k, and j. 
+Note that there are two kinds of embedding: 
+
+	1) Input for context (W)
+
+	2) Output for the target word (~W (the bar is over top as if its a rational number that keeps repeating))
+
+These two kinds of embeddings are a minor detail, but nonetheless important to remember. 
+
+Now, the question is, how do we generate the function, F? As you may recall, one of the goals of GloVe was to create vectors with values that have a good generalizing ability, which can be expressed using simple arithmetic operations (such as addition and subtraction). 
+we mush choose 'F' so that the vectors that we get when using this function match this property. 
+
+Since we want the use of arithmetic operations between vectors to be meaningful, we have to make the input for the function, F, the result of an arithmetic operation between vectors.
+The easiest way to do this is to apply F to the difference between the vectors we are comparing. 
+
+F(w(sub(i)) - w(sub(j)), `w(sub(k))) about(=) (p(sub(i,j)))/(p(sub(j,k)))
+
+To specify a linear relationship between w(sub(i)) - w(sub(j)) and ~w(sub(k)), we use the dot-product operation: 
+
+F(dot(w(sub(i))) - w(sub(j), `w(sub(k)))) about(=) (p(sub(i,j)))/(p(sub(j,k)))
+
+Now, to simplify the expression and evaluate the function, F, we use the following approach. 
+
+First, we can take the logarithm of the probabilities ratio to convert the ratio into the difference between the probabilities. 
+Then, we can express the fact that some words are more common than others by adding an offset term for each word.
+
+Given these considerations, we obtain the following equation: 
+dot(w(sub(i) - w(sub(j), `w(sub(k))))) + b(sub(i)) - b(sub(j))) = log(P(sub(i,k))) - log(P(sub(j,k)))
+
+We can convert this equation into an equation for a single record from the co-occurrence matrix: 
+dot(w(sub(i)), `w(sub(i))) + b(sub(i)) = log(X(sub(i,k))) - log(X(sub(i)))
+
+By doing this, we transform the last term of the equation on the right-hand side into the bias term. 
+By adding the output bias for symmetry, we get the following formula: 
+
+dot(w(sub(i)), `w(sub(k))) + b(sub(i)) + `b(sub(k)) = log(X(sub(i,k)))
+
+This formula is the central GloVe equation (Yall better like the effort I put in this writing those.)
+But there is one problem with this equation: It equally evaluates all co-occurrences of words. 
+Howevery, in reality, not all co-occurrences have the same quality of information. 
+Co-occurrences that are rare tend to be noisy and unreliable, so we want stronger weights to be attrached to more frequent co-occurrences. 
+On the other hand, we do not want frequent co-occurrences to dominate the loss function entirely, so we do not want the estimates to be solely dependent on frequency. 
+
+As result of experimentation, Jeffrey Pennintion, Richard Scher, and Christopher D. Manning, the authers of the original article, GloVe: Global Vectors for Word Representation, found that the following weight function works well: 
+
+weight(x) = min(1, (x/x(sub(max)))(3/4))
+
+Using this function, we can transform  the loss function into the following form: 
+
+J = (summation(sub(i,j))) weight(X(sub(i,j)))(dot(w(sub(i)), `w(sub(j)) + b(sub(i)) + `b(sub(k)) - log(X(sub(i,j))))^2)
+
+Now, the task of finding embedding vectors is reduced to minimizing this loss funciton. 
+This operation can be accomplished, for example, using the stochastic gradient descent approach. 
+

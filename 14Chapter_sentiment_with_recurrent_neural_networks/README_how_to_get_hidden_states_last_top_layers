@@ -1,0 +1,6 @@
+We get the top two hidden layers states from the first dimension. 
+We concatenated them with the "torch::cat" function before passing them to the linear layer(after applying dropout). 
+The "torch::cat" function combines tensors along an existing dimension. 
+Note that the tensors should be the same shape, contray to the "torch::stack" function (which adds a new dimension when it combines tensors). 
+Performing these narrowing operations left the original dimensions. 
+Due to this, we used the "squeeze" function to remove them. 

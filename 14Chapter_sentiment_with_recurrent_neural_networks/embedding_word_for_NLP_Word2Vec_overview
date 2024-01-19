@@ -1,0 +1,38 @@
+( pramodv.ece.illinois.edu/qual.pdf (this is from U of I personaly beleive this is a great resource for anyone that wants to learn) https://web.stanford.edu/class/cs224n/readings/cs224n-2019-notes01-wordvecs1.pdf (this link is from Stanford this is a very great resource to read VERY GREAT))
+
+In 2013, Tomash mikolov proposed a new approach to word embedding, which he called Word2Vec. 
+His approach is based on another crucial hypothesis, which in science is usually called the distributional hypothesis or locality hypothesis: words that are similar in meaning occur in similar contexts (Rubenstein and Goodenough, 1965). 
+Proximity measure, in this case, is understood very broadly as the fact that only semantically similar words can be in proximity. 
+For example, the phrase "clockwork alarm" clock is acceptable in this model, but "clockwork orange" is not. 
+The words clockwork and orange can't be easily combined by semantics. 
+The model proposed by Milkolov is very simple (and therefore useful) -- we predict the probability of a word from its environment (context). 
+Specifically, we learn word vectors so that the probability assigned by the model to a word is close to the probability of meeting this word in the environment (context) of the original text. 
+
+The training process is organized as follows: 
+
+	1) The corpus is read, and the occurrence of each word in the corpus is calculated (that is, the number of times each word occurs in the corpus)
+
+	2) an array of words is sorted by frequency, and rare words are deleted (they are also called hapax). 
+
+	3) The subsentence is read from the corpus, and subsampling of the most frequent words is done. 
+A subsentence is a specific fundamental element of the corpus, usually just a sentance, but it can be a paragraph or even an entire article. 
+Subsampling is the process of the algorithm and contributes to a significant increase in the quality of the resulting model.
+
+	4) We go through the subsentence with a window(the windo size is set as a parameter). 
+This means that we take 2k + 1 words sequentially, with the word that should be predicted in the center. 
+The surrounding words are a context of length, k, on each side. 
+
+	5) The selected words are used to train a simple feedforward neural network, usually with one hidden layer and with the hierarchical softmax and/or negative sampling activation function for the output layer. 
+For the hidden layer, a linear activation function is used. 
+
+	6) The target value of the prediction is the world in the center of the window that needs to be predicted. 
+
+	7) Words during the training process are usually presented using one-hot encoding. 
+
+	8) After training the network on the entire traiing corpus, each word in our model should be associated with a unique vector that we change in the proces of training our model. 
+
+	9) The size of the vector that corresponds to the word is equal to the size of the hidden layer of the learning network, while the values of the vector are the values of the outputs of the hidden layer neurons. 
+These values can be obtained after we feed some training samples to the network input. 
+
+Although the model does not explicitly include any semantics -- only the statistical properties of the corpus of texts -- it turns out that the trained Word2Vec model can capture some semantic properties of words. 
+Currently, there are various modifications of this alogrithm, such as the Doc2Vec algorithm, which learns paragraph and document embeddings. 

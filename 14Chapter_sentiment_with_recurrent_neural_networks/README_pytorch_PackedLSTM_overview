@@ -1,0 +1,4 @@
+The "PackedLSTM" module definition uses the "PackedLSTMImpl" class as the module function's implementation. 
+Also, notice that the "PackedLSTM" module definition deffers from the "torch::nn::LSTM" module in that the "forward" function takes the additional parameter, "lengths". 
+The implementation of this module is based on the code of the "torch::nn::LSTM" module from the "PyTorch" library. 
+The "flat_weights" and "forward" fucntion because it is hidden in the base class, and we can access it from the "torch::nn::LSTM" module.  

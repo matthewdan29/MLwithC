@@ -1,0 +1,18 @@
+The following series explains the implementation of a training cycle's iteration: 
+
+	1) We clear the prevoius gradients from the optimizer
+
+	2) Next, we convert the batch data into distinct tensors
+
+	3) Now that we have the sample texts and lengths, we can perform the forward pass of the model
+
+	4) Now that we have the predictions from our model, we use the "squeeze_" functoin to remove any unnecessary dimensions so that the model's compatible with the loss function. 
+Notice that the "squeeze_" function has an underscore, which means that the function is evaluated in place, without any additional memory being allocated. 
+
+	5) Then, we compute a loss value to estimate the error of our model. 
+
+	6) Then, we compute the gradients for our model and update its parameters with these gradients. 
+
+	7) One of the final steps of the training function is to accumulate the loss and the accuracy values for averaging. 
+
+

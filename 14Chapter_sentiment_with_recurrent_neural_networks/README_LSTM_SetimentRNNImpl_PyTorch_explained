@@ -1,0 +1,11 @@
+In the constructor of our module, we initialized the base blocks of our network.
+We used the "register_parameter" method of the "torch::nn::Module" class to create the "embedding_weights_" object, which is filled with the empty tensor. 
+Registration makes automatically calculating the gradient possible. 
+Notice that the one dimension of the "embedding_weights_" object is equal to the vocabulary length, while the other one is equal to the length of the embedding vector (100, in our case). 
+The "rnn_" object is initilized with the "torch::nn::LSTMOptions" type of object.
+We defined the length of the embedding, the number of hidden dimensions(number of hidden neurons in the LSTM module layers), the number RNN layers, the flag that tells us wheter the RNN is bidirectional or not, and specified the regularization parameter (the dropout factor value). 
+
+The "fc_" object is our output layer with just a fully connected layer and a linear activation function. 
+It is configured to take the "hidden_dim * 2" number of inputs items, which means that we are going to pass the hidden states from the last two modules of our RNN into it. 
+The "fc_" object returns only one value; we didn't use the sigmoid activation function for it because, as stated in the PyTorch documentation, it makes sense to use a special loss function called "binary_cross_entropy_with_logits", which includes the sigmoid and is more stable than using a plain sigmoid followed by binary cross-entropy loss. 
+We also initialized and registered the "dropout_" object, which is used for additional regularization; the "torch::nn::DropoutOptions" object only takes a dropout factor value as its setting. 

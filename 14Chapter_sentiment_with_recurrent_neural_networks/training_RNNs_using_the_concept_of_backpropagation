@@ -1,0 +1,57 @@
+( https://inst.eecs.berkeley.edu/~cs182/sp23/assets/notes_new/lect14.pdf I own nothing to this link but its a great resource for RNN training)
+Training neural networks nearly everywhere, the error backpropagation algorithm is used. 
+The results of performing inference on the training set of examples is checked against the expected result (labeled dats). 
+The difference between the actual and expected values is called error. 
+This error is propagated to the network weights in the opposite direction. 
+Thus, the network adapts to labeled data, and the result of this adaption works well for the data that the network did not meet in the initial training examples (generalization hypothesis). 
+
+We have several options regarding which network outputs we can consider the error: 
+
+	1) we can calculate the error by comparing the output of the last cell of the subsequence with the target value for the current training samples. 
+This approach works well for the classification task. 
+For example, if we need to determine the sentiment of a tweet (in other words, we need to classify the polarity of a tweet; is the expressed opinion negative, postive, and or neutral?). 
+To do this, we select tweets and place them into three categories(a's): 
+		3a) negative
+
+		2a) positive 
+
+		3a) neutral 
+
+The output of the cell should be three numbers: the weights of the categories. 
+The tweet could also be marked with three different numbers: the probabilities of the tweet belonging to the correspoinding category. 
+After calculating the error on a subset of the data, we could backpropagate it through the output and cell states. 
+
+	2)We can read the error immediately at the output of the cell's calculation for each element of the subsequence. 
+This approach is well suited for the task of predicting the next element of a sequence from what came previously. 
+Such an approach can be used, for example, in the problem of determining anomalies in time series data, in the task of predicting the next character in a text, or for natural language translation tasks. 
+Error backpropagation is also possible through outputs and cell states, but in this case, we need to calculate as many errors as we have outputs. 
+This means that we should also have target values for each sequences element we want to predict. 
+
+Unlike a regular fully connected neural network, a recurrent network is deep in the sense that the error propagates not only in the backward direction from the network outputs to its weights but also through the connections between timestep states. 
+Therefore, the length of the input subsequence determines the network's depth. 
+There is a variant of the method of error backpropagation called backproapagtion throught time (BPTT), which propagates the error throught the state of the recurrent network. 
+
+The idea behind BPTT- we unfold a recurrent network for a certain number of timesteops, which converts into a usual deep neural network, which is then trained by the usual backpropagation method. 
+Notice that this method assumes that we're using the same parameters for all timesteps. 
+Furthermore, weight gradients are summarized with each other when the error propagates in a backward direction through the states (steps). 
+They are duplicated during the initial configuration of the network 'n' times, as though adding layers to a regular feedforward network. 
+THe number of steps needed to unfold the RNN conrrespoinds to the length of the input sequence. 
+If the input sequence is very long, then the computational cost of training the network increases 
+
+A modified version of the algorithm, called trancated backpropagation throught time (TBPTT), used to reduce computational complexity. 
+Its essence lies in the fact that we limit the number of forward propagation steps, and on the backward pass, we update the weights for a limited set of conditions. 
+This version of algorithm has two additional hyperparameters: 
+	
+	1b) k1, which is the number of forward pass timesteps between updates
+
+	2b) k2, which is the number of timesteops that apply BPTT. 
+
+The number of times should be large enough to capture the internal structure of the problem the network learned.
+The error is accumulated only for k2 states. 
+
+These training methods for RNNs are highly susceptible to the effect of bursting or vanishing gradients. 
+Accordingly, as a result of backpropagation, the error can become very large, or conversely, fade away. 
+These problems are associated with the great depth of the network, as well as the accumulation of errors. 
+The specialized cells of RNNs were invented to avoid such drawbacks during training. 
+THe first such cell was the LSTM, and now there is a wide range of alternatives; one is the most popular among them is "GRU". 
+
