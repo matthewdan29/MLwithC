@@ -1,0 +1,13 @@
+This dir is going to go over deploying machine learning models on modile devices running on both the Android operating system and the Google Cloud Platform (GCP). 
+
+Using C++ on mobile devices allows us to  make programs faster and more compact. 
+We can untilize as many computational resources as possible because modern compilers can optimize the program concerning the target CPU architecture. 
+C++ doesn't use an additional garbage collector for memeory management, which can have a sigificant impact on program perfformance. 
+Program size can be reduced because C++ desn't use an additional VM and is compiled directly to machine code.
+These facts make C++ the right choice for mobile devices with a limited amount of resources and can be used to solve heavy computational task.
+
+Using C++ to implenment machine learning models that are used for the cloud can provide other benefits. 
+As we mentioned previously, you can increase application performance by compiling a program for your specific architecture; usually, this plays a significant role in the data preprocessing step. 
+THe starting time is also much shorter for a native application than for interpretable programs. 
+This fact can make your application more responsive if you're using cloud machines that are only launched by client requests. 
+These types of machines are used for reducing the cloud service's cost. 

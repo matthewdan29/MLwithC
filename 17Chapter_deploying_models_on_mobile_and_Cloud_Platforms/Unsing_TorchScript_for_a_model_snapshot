@@ -1,0 +1,8 @@
+We will show how to get he model snapshot file so that we can use it in our mobile application. 
+In the previous dir, we discussed how to save and load model parameters and how to use ONNX format to share models between frameworks. 
+When we use the PyTorch framework, there is another method we can use to share models between the Python API and C++ API called TorchScript. 
+
+This mode uses real-time model tracing to get a special type of model defintion that can be executed by the PyTorch engine, regardless of API. 
+For PyTorch 1.2, only the Python API can create such definitions, but we can use the C++ API to load the model and execute it. 
+Also, the mobile version of the PyTorch framework still doesn't allow us to program neural networks with a full featured C++ API; only the ATen library is available. 
+

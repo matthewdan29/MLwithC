@@ -1,0 +1,3 @@
+There are two popular approaches regarding how to deploy a machine learning model to a mobile device with Android. 
+We can either use the PyTorch framework, which now incorporates Caffe2, or we can use the TensorFlow Lit framework.
+
