@@ -1,0 +1,4 @@
+next will discuss two approaches to network parameter serialization that are availble in the "PyTorch" C++ library. 
+	1) using the "torch::save" function,
+
+	2) using the object of the "torch::serialize::OutputArchive" type for writing paramters into it. 

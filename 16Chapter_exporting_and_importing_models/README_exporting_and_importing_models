@@ -1,0 +1,10 @@
+In this dir we will discuss how to save and load model parameters durining and after training. 
+This is quite an important issue since real model training can take a very long time, and we want to be able to save intermediate results and then load them fro use in evaluation made in production. 
+
+Such regular save operations can be beneficical in the case of a random application crash. 
+Another substantial feature of any machine learning (ML) framework is its ability to export the model architecture, which allows us to share models between frameworks and make model deployment easier. 
+The main topic of this dir is to show how to exprot and import model parameters such as weights and bias vaules with different C++ libraries. 
+The secod part of this dir is all aboout Open Neural Netwok Exchange (ONNX) format, which is currently gaining popularity amoung different ML frameworks and can be used to share trained models. 
+This format is suitable for sharing model architectures as well as model parameters. 
+
+

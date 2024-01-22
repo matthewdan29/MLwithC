@@ -1,0 +1,3 @@
+Let's learn how to load an image into the Caffe2 tensor object and modify it according to the model's input requirements. 
+The model expects the input images to be normailzed and three-channel RGB images whoose shapes are ("N x 3 x H x W"), where 'N' is the batch size and 'H' and 'W' are expected to be at least 224 pixels wide. 
+Normalization assumes that the images are loaded into a range of "[0, 1]" and then normalized using means equal to "[0.485, 0.456, 0.406]" and standard deviations equal to "[0.229, 0.224, 0.225]"

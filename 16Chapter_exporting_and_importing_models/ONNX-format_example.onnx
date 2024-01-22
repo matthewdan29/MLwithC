@@ -1,0 +1,79 @@
+ir_version: 3
+
+graph
+{
+	node
+	{
+		input: "data"
+		input: "resnetv24_batchnorm0_gamma"
+		input: "resnetv24_batchnorm0_beta"
+		input: "resnetv24_batchnorm0_running_mean"
+		input: "resnetv24_batchnorm0_running_var"
+		output: "resnetv24_batchnorm0_fwd"
+		name: "resnetv24_batchnorm0_fwd"
+		op_type: "BatchNormlization"
+		attribute 
+		{
+			name: "epsilon"
+			f: le-05
+			type: FLOAT
+		}
+		attribute
+		{
+			name: "momentum"
+			f: 0.9
+			type: FLOAT
+		}
+		attribute
+		{
+			name: "spatial"
+			i: 1
+			type: INT
+		}
+	}
+	node
+	{
+		input: "resnetv24_batchnorm0_fwd"
+		input: "resnetv24_conv0_weight"
+		output: "resentv24_conv0_fwd"
+		name: 	"resnetv24_conv0_fwd"
+		op_type: "Conv"
+		attribute
+		{
+			name: "dilations"
+			ints: 1
+			ints: 1
+			type: INTS
+		}
+		attribute
+		{
+			name: "group"
+			i: 1
+			type: INT
+		}
+		attribute
+		{
+			name: "kernel_shape"
+			ints: 7
+			ints: 7
+			type: INTS
+		}
+		attribute
+		{
+			name: "pads"
+			ints: 3
+			ints: 3
+			ints: 3
+			ints: 3
+			type: INTS
+		}
+		attribute
+		{
+			name: "strides"
+			ints: 2
+			ints: 2
+			type: INTS
+		}
+	}
+	...
+}

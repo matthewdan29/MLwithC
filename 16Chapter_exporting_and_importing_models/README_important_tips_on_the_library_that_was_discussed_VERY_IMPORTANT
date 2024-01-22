@@ -1,0 +1,4 @@
+The "Shogun toolkit" can lead neural network architectures from the JSON descritions, but can't export them. 
+The "Dlib" library can export neural networks in XML format but can't load them.
+The "Pytorch" C++ API lacks a model architecture that supports exporting, but it can lead and evaluate model architectures that have been exported from the Python API with its TorchScript functionality. 
+However, the "PyTorch" library does provide access to the Caffe2 library API, which allows us to load an devaluate models saved in ONNX format from C++.
