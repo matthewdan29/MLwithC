@@ -1,0 +1,3 @@
+/home/matthew/Documents/Mechine_Learning_with_C++/8Chapter_classification/shark-8/CMakeFiles/sharkml-classify.dir
+/home/matthew/Documents/Mechine_Learning_with_C++/8Chapter_classification/shark-8/CMakeFiles/edit_cache.dir
+/home/matthew/Documents/Mechine_Learning_with_C++/8Chapter_classification/shark-8/CMakeFiles/rebuild_cache.dir
