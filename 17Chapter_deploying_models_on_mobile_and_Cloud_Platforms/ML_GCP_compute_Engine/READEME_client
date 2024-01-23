@@ -1,0 +1,6 @@
+The client part of our server can be implemented in different languages and with different technologies that support the HTTP protocol. 
+THe most stragitforward implementation of the client application can be written with HTML and Javascript. We can use such a client with any modern browser. 
+
+There will be two files in our client application. The first one will be the "index.html" file, which should contain the definition of a simple web page with a form for uploading files.
+
+The second file is a JavaScript implementation of the HTML form event handler. which "upload.js" file. 

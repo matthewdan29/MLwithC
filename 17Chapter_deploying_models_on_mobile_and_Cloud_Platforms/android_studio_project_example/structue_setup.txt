@@ -1,0 +1,7 @@
+The project, it has a button that we can use to launch a native camera application to take a photo, a text view to show image classification descriptions, and an image view to show the photo. 
+We should define these UI elements in the "activity_main.xml" file of the project.
+
+Next, we should also define the text captions for the UI elements in the "strings.xml" file, which you can find the "res" folder. 
+
+Now that the UI elements have been defined, we can connect them to event handlers in the "MainActivity" class to make our application respond to users' actions. 
+ 

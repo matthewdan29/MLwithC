@@ -1,0 +1,63 @@
+Now that we've implemented and tested our server application in our local development environment, we are ready to deploy it to the cloud. 
+We need to have a Google account and be registered in the GCP to be able to continue. 
+It is enough to have a free subscription to GCP to perform the following steps and try our server application in the Google Compute Engine: 
+
+	1) log into your Google account and go to GCP. 
+
+	2) ON the main page, open the Go to Compute Engine linke or use the Navigation Menu and select the Compute Engine link. 
+
+	3) On the Compute Engine page, select the VM instances option. 
+
+	4) Click the Create instance link at the top of the page and create VM instance with the following characteristics. 
+
+	5) On the VM instances page, select VM instance that we created. 
+Start it by clicking the Start button at the top of the page. 
+
+	6) get gcp sdk. 
+
+	7) We can use the GCP SDK to copy the server application's source code to the running instance. 
+
+
+	8) On the VM instances page, we have to identify the VM instance that we started previously and where we copied the source files. 
+Then, we should find the column named "Connect", select SSH, and choose the Open in browser window option. 
+This action opens a new brwoser window with an interactive command-line session connected to your remote machine. 
+We can also use the GCP SDK to configure the SSH session with standard utilites. 
+
+	9) you linux commands. 
+
+	10) Now that we've configured the development eviroment, we can continue working with the source code and build the required third-party libraries. 
+We have two such dependencies: the "cpp-httplib" library and the PyTorch framework. 
+The "cpp-httplib" library is a single-file header-only library, so it is enough to clone it to our source code tree. 
+
+	11) There are two ways to get PyTorch frameworks dependency. 
+If your enviroment has a GPU with CUDA support, you can download the pre compiled binaries from the official site. 
+
+	12) The second way is to build PyTorch from certain sources. 
+This is the only option you have if your environment doesn't have a GPU because the official binaries require working CUDA support. 
+However, if your goal is to perform inference only, you wont need this becuase in many cases, a modern CPU can fully satisfy your needs. 
+Also, when you build PyTorch form sources, you can include the "FBGEMM" library in your build. 
+It is a low-precision, high-performance matrix-matrix multiplication and convolution library for server-side inference that was developed by Facebook engineers. Now, you can use FBGEMM as a backend of the Caffe2 and Pytorch quantized operators for "x86" machines by using the "USE_FBGEMM" CMake option during a build.
+
+ 
+	13) Now that we've configured the developmewnt environment and gathered all the dependencies, we can build our server application on the removed VM. 
+
+	14) To run the server application, we need two more files: the model snapshot file and the synset file, which contains class descriptions. 
+We can copy them from the local development enviroment to the remote machine with the following commands while using the GCP SDK
+
+	15) Before we can start our application, we need to configure the GCP Firewall to allow incoming connections to the server program we want to launch. 
+On the GCP console page, go to the Navigation Menu and open the VPC network linke. 
+On the VPC network page, open the FIrewall rules link. 
+Then, on te Firewall rules page, click the Create a firewall rule button to create a new firewall rule. 
+We can find this button at the top of the page. 
+
+	16) We also need to remember the IP addresses that have been assigned to the VM instance we are using. 
+There are two IP address: one that's internal and one that's external. 
+We can find them on the VM instance page when we're looking at a particular VM instance record. 
+The internl IP address is statically assigned, and we can even see it for stopped instances. 
+The external IP addres is dynamically assigned when you start the instance.
+
+	17) TO start our server application: 
+		
+
+	18) To make our HTML clinet work, we have to update the "upload.js" file. 
+At the begining of the file, there's a definition for the "url" string. 

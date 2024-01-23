@@ -1,0 +1,15 @@
+We will be using Android Studio IDE to create our mobile application. 
+The "cpp" folder contains the C++ part of the whole project. 
+In the project, the Android Studio IDE created the C++ part as a native shared library project that had been configured with the CMake build generation system. 
+The "java" folder contains the Java part of the project. 
+In our case, it is a single file that defines the main activity -- the object that's used as a connection between the UI elements and event handlers. 
+The "res" folder contains project resources, such as UI elements and strings definitions. 
+
+We also need to create the "jniLibs" folder under the "main" folder, with the following structure (pic 17.1)
+
+Android studio requires ust ot place additional native libraries in such folders to correctly package them into the final application. 
+It also allows the JNI system to be able to find these libraries. 
+Notice that we placed PyTorch libraries in the "armeabi-v7a" folder because they have only been compiled for this CPU architecture. 
+If you have libraries for other architectures, you have to create folders with corresponding names. 
+
+The IDE uses the Gradle build system to project configuration, so there are two files named "build.gradle", which contains the main settings, and "local.properties", which contains user-degined values. 
